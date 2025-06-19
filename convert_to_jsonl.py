@@ -1,4 +1,5 @@
 import json
+from typing import Any
 
 # Ensure the fields are in the correct order
 REQUIRED_FIELDS = [
@@ -16,15 +17,18 @@ REQUIRED_FIELDS = [
 SEPARATOR = "_"
 
 
-def flatten_dict(d, parent_key="", is_root=True):
+def flatten_dict(
+    d: dict[str, Any], parent_key: str = "", is_root: bool = True
+) -> dict[str, str]:
     """Flatten a nested dictionary, skipping the 'matches' key and ensuring field order."""
-    items = []
+    items: list[tuple[str, Any]] = []
+
     for k, v in d.items():
         if k == "matches":
             continue
         new_key = f"{parent_key}{SEPARATOR}{k}" if parent_key else k
         if isinstance(v, dict):
-            items.extend(flatten_dict(v, new_key, is_root=False).items())
+            items.extend(flatten_dict(v, new_key, is_root=False).items())  # type: ignore
         else:
             items.append((new_key, v))
 
@@ -38,7 +42,7 @@ def flatten_dict(d, parent_key="", is_root=True):
     return flattened_dict
 
 
-def convert_to_jsonl(input_file, output_file):
+def convert_to_jsonl(input_file: str, output_file: str) -> None:
     """Convert a JSON file to JSONL format with flattened entries."""
     with open(input_file, "r", encoding="utf-8") as f:
         data = json.load(f)
