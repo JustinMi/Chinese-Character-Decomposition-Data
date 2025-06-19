@@ -24,19 +24,26 @@ def flatten_dict(
     items: list[tuple[str, Any]] = []
 
     for k, v in d.items():
-        if k == "matches":
+        if k == "matches":  # Skip the 'matches' key
             continue
+
+        # Create a new key with the separator
         new_key = f"{parent_key}{SEPARATOR}{k}" if parent_key else k
+
         if isinstance(v, dict):
+            # Recursively flatten the dictionary
             items.extend(flatten_dict(v, new_key, is_root=False).items())  # type: ignore
         else:
             items.append((new_key, v))
 
     flattened_dict = dict(items)
 
-    # If at the root level, enforce ordering and remove duplicates
+    # If at the root level, enforce ordering and add default values
     if is_root:
-        return {field: flattened_dict.get(field, "") for field in REQUIRED_FIELDS}
+        return {
+            field: flattened_dict.get(field, [] if field == "pinyin" else "")
+            for field in REQUIRED_FIELDS
+        }
 
     # If not at the root level, return the flattened items as-is
     return flattened_dict
@@ -48,7 +55,7 @@ def convert_to_jsonl(input_file: str, output_file: str) -> None:
         data = json.load(f)
 
     with open(output_file, "w", encoding="utf-8") as f:
-        for entry in data[:3]:
+        for entry in data:
             flattened_entry = flatten_dict(entry)
             f.write(json.dumps(flattened_entry, ensure_ascii=False) + "\n")
 
