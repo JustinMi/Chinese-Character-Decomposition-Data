@@ -4,9 +4,12 @@ Fix A  Entries labeled ideographic/pictographic whose own hint says a
        component provides the pronunciation become pictophonetic, with
        etymology_phonetic filled in, plus etymology_semantic when the
        decomposition makes it unambiguous. etymology_hint is left alone.
-Fix B  Add the modern readings from Unihan kXHC1983 that pinyin is missing,
-       ordered: first kMandarin reading, then existing readings, then the
-       added ones. Readings are never removed.
+Fix B  Add the readings from Unihan kXHC1983 that pinyin is missing, ordered:
+       first kMandarin reading, then existing readings, then the added ones.
+       kXHC1983 (1983) predates the 1985 审音表, so a reading is only added
+       if kTGHZ2013 (the 2013 standard) also lists it, checking traditional
+       characters through their simplified form; the rest are held back for
+       review (phase 2). Readings are never removed.
 
 Dry run by default; pass --write to apply.
 
@@ -32,8 +35,9 @@ from common import (
     ids_text,
     load_changelog,
     load_entries,
-    load_unihan_readings,
+    load_unihan,
     manually_patched,
+    Unihan,
     nfc,
     parse_ids,
 )
@@ -150,20 +154,36 @@ def apply_fix_a(e: Entry, result: FixA) -> dict[str, Any]:
 # Fix B
 
 
-def fix_b_pinyin(e: Entry, xhc: dict[str, list[str]], mandarin: dict[str, str]) -> list[str] | None:
-    """The new pinyin list for an entry, or None if it has no kXHC1983 data."""
-    readings = xhc.get(e["character"])
+@dataclass
+class FixB:
+    pinyin: list[str]  # the new list
+    added: list[str]
+    held_back: list[str]  # missing kXHC1983 readings that kTGHZ2013 doesn't list
+    not_in_xhc: list[str]  # existing readings kXHC1983 doesn't list (kept)
+    modern: set[str] | None  # the kTGHZ2013 readings used as the filter
+    modern_via: str  # the character whose kTGHZ2013 data was used
+
+
+def analyze_fix_b(e: Entry, unihan: Unihan) -> FixB | None:
+    """Fix B's decision for one entry, or None if it has no kXHC1983 data."""
+    ch = e["character"]
+    readings = unihan.xhc1983.get(ch)
     if not readings:
         return None
     existing = list(e["pinyin"])
     have = {nfc(p) for p in existing}
-    combined = existing + [r for r in readings if r not in have]
-    first = mandarin.get(e["character"])
+    modern, via = unihan.modern_readings(ch)
+    missing = [r for r in readings if r not in have]
+    added = [r for r in missing if modern is None or r in modern]
+    held_back = [r for r in missing if r not in added]
+    combined = existing + added
+    first = unihan.mandarin.get(ch)
     keys = [nfc(p) for p in combined]
     if first in keys:
         i = keys.index(first)
         combined = [combined[i]] + combined[:i] + combined[i + 1:]
-    return combined
+    not_in_xhc = [p for p in existing if nfc(p) not in readings]
+    return FixB(combined, added, held_back, not_in_xhc, modern, via)
 
 
 def has_tone_mark(p: str) -> bool:
@@ -194,7 +214,7 @@ def main() -> None:
 
     entries = load_entries(DICT_PATH)
     protected = manually_patched(load_changelog())
-    xhc, mandarin, unicode_version = load_unihan_readings()
+    unihan = load_unihan()
     rng = random.Random(args.seed)
 
     changes: list[dict[str, Any]] = []
@@ -218,32 +238,26 @@ def main() -> None:
         new_entries.append(e)
 
     # ---- Fix B (on top of Fix A; the two touch different fields)
-    b_results: list[tuple[str, list[str], list[str]]] = []
+    b_all: list[tuple[str, list[str], FixB]] = []  # every entry with kXHC1983 data
     b_no_data = 0
-    b_mandarin_missing: list[tuple[str, list[str], str]] = []
-    not_in_xhc: list[tuple[str, list[str], list[str]]] = []
     b_protected: list[str] = []
     for e in new_entries:
         ch = e["character"]
         if (ch, "pinyin") in protected:
             b_protected.append(ch)
             continue
-        new = fix_b_pinyin(e, xhc, mandarin)
-        if new is None:
+        result = analyze_fix_b(e, unihan)
+        if result is None:
             b_no_data += 1
             continue
-        extra = [p for p in e["pinyin"] if nfc(p) not in xhc[ch]]
-        if extra:
-            not_in_xhc.append((ch, extra, xhc[ch]))
-        if mandarin.get(ch) not in {nfc(p) for p in new}:
-            b_mandarin_missing.append((ch, new, mandarin.get(ch, "-")))
-        if new != e["pinyin"]:
-            b_results.append((ch, list(e["pinyin"]), new))
-            changes.append(change(ch, "pinyin", e["pinyin"], new, "fix_b"))
-            e["pinyin"] = new
+        b_all.append((ch, list(e["pinyin"]), result))
+        if result.pinyin != e["pinyin"]:
+            changes.append(change(ch, "pinyin", e["pinyin"], result.pinyin, "fix_b"))
+            e["pinyin"] = result.pinyin
+    b_results = [(c, o, r.pinyin) for c, o, r in b_all if r.pinyin != o]
 
     # ---- Report
-    print(f"Phase 1 {'WRITE' if args.write else 'DRY RUN'}  (Unihan {unicode_version})")
+    print(f"Phase 1 {'WRITE' if args.write else 'DRY RUN'}  (Unihan {unihan.version})")
     print()
     print("=" * 78)
     print("FIX A: ideographic/pictographic entries whose hint names a phonetic")
@@ -290,25 +304,32 @@ def main() -> None:
     print()
 
     print("=" * 78)
-    print("FIX B: add missing kXHC1983 readings, kMandarin first")
+    print("FIX B: add missing kXHC1983 readings that kTGHZ2013 confirms, kMandarin first")
     print("=" * 78)
-    added_any = [(c, o, n) for c, o, n in b_results if len(n) > len(o)]
+    added_any = [(c, o, r) for c, o, r in b_all if r.added]
     reorder_only = [(c, o, n) for c, o, n in b_results if len(n) == len(o)]
-    added_total = sum(len(n) - len(o) for c, o, n in b_results)
     first_changed = [(c, o, n) for c, o, n in b_results if o and o[0] != n[0]]
-    toneless_added = [(c, r) for c, o, n in b_results for r in n
-                      if nfc(r) not in {nfc(p) for p in o} and not has_tone_mark(r)]
-    print(f"entries with kXHC1983 data: {len(new_entries) - b_no_data - len(b_protected)}   "
-          f"without (left untouched): {b_no_data}"
+    toneless_added = [(c, a) for c, _, r in b_all for a in r.added if not has_tone_mark(a)]
+    held = [(c, o, r) for c, o, r in b_all if r.held_back]
+    unfiltered = [(c, r) for c, _, r in added_any if r.modern is None]
+    via_simplified = sum(1 for c, _, r in added_any if r.modern is not None and r.modern_via != c)
+    mandarin_missing = [(c, r.pinyin) for c, _, r in b_all
+                        if unihan.mandarin.get(c) not in {nfc(p) for p in r.pinyin}]
+    print(f"entries with kXHC1983 data: {len(b_all)}   without (left untouched): {b_no_data}"
           + (f"   manually patched (left alone): {len(b_protected)}" if b_protected else ""))
     print(f"entries changed: {len(b_results)}")
-    print(f"  readings added: {len(added_any)} entries, {added_total} readings")
+    print(f"  readings added: {len(added_any)} entries, {sum(len(r.added) for _, _, r in added_any)} readings")
+    print(f"    checked against kTGHZ2013 via the simplified form: {via_simplified} entries")
+    print(f"    no kTGHZ2013 data at all, added unfiltered: {len(unfiltered)} entries, "
+          f"{sum(len(r.added) for _, r in unfiltered)} readings")
     print(f"  reordered only (kMandarin moved first): {len(reorder_only)}")
     print(f"  first reading changed: {len(first_changed)}")
     print(f"  added readings with no tone mark (neutral tone): {len(toneless_added)}")
-    print(f"entries whose first kMandarin value is not among their readings (not reordered): {len(b_mandarin_missing)}")
-    for c, readings, m in b_mandarin_missing:
-        print(f"  {c}  {dumps(readings)}  kMandarin {m}")
+    print(f"held back (in kXHC1983, not in kTGHZ2013; -> review/xhc_readings_held_back.csv): "
+          f"{sum(len(r.held_back) for _, _, r in held)} readings in {len(held)} entries")
+    print(f"entries whose first kMandarin value is not among their readings (not reordered): {len(mandarin_missing)}")
+    for c, readings in mandarin_missing:
+        print(f"  {c}  {dumps(readings)}  kMandarin {unihan.mandarin.get(c, '-')}")
     after = collections.Counter(len(e["pinyin"]) for e in new_entries)
     print(f"entries with 2+ readings after Fix B: {sum(n for k, n in after.items() if k > 1)}  {dict(sorted(after.items()))}")
     print()
@@ -316,18 +337,30 @@ def main() -> None:
     for c, o, n in first_changed:
         print(f"  {c}  {dumps(o)} -> {dumps(n)}")
     print()
+    if reorder_only:
+        print(f"Reordered without additions ({len(reorder_only)}):")
+        for c, o, n in reorder_only:
+            print(f"  {c}  {dumps(o)} -> {dumps(n)}")
+        print()
     if toneless_added:
         print("Neutral-tone readings added:", " ".join(f"{c}:{r}" for c, r in toneless_added))
         print()
+    if unfiltered:
+        print("Added without a kTGHZ2013 check:", " ".join(f"{c}:{','.join(r.added)}" for c, r in unfiltered))
+        print()
+    print("Held back:", " ".join(f"{c}:{','.join(r.held_back)}" for c, _, r in held))
+    print()
     k = min(args.samples * 3 // 2, len(b_results))
     print(f"Random sample of {k} Fix B changes (seed {args.seed}):")
     for c, o, n in sorted(rng.sample(b_results, k)):
-        print(f"  {c}  {dumps(o)} -> {dumps(n)}    (kXHC1983 {' '.join(xhc[c])}; kMandarin {mandarin.get(c, '-')})")
+        print(f"  {c}  {dumps(o)} -> {dumps(n)}    (kXHC1983 {' '.join(unihan.xhc1983[c])}; "
+              f"kMandarin {unihan.mandarin.get(c, '-')})")
     print()
+    not_in_xhc = [(c, r.not_in_xhc) for c, _, r in b_all if r.not_in_xhc]
     print(f"Existing readings not in kXHC1983 (kept; -> review/readings_not_in_xhc.csv): "
-          f"{sum(len(x) for _, x, _ in not_in_xhc)} readings in {len(not_in_xhc)} entries")
-    for c, extra, readings in not_in_xhc[:40]:
-        print(f"  {c}  {' '.join(extra):<10} kXHC1983: {' '.join(readings)}")
+          f"{sum(len(x) for _, x in not_in_xhc)} readings in {len(not_in_xhc)} entries")
+    for c, extra in not_in_xhc[:40]:
+        print(f"  {c}  {' '.join(extra):<10} kXHC1983: {' '.join(unihan.xhc1983[c])}")
     if len(not_in_xhc) > 40:
         print(f"  ... and {len(not_in_xhc) - 40} more")
     print()

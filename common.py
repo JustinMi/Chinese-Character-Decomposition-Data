@@ -16,6 +16,7 @@ import sys
 import unicodedata
 import urllib.request
 import zipfile
+from dataclasses import dataclass
 from typing import Any
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -168,45 +169,72 @@ def ensure_download(url: str, path: str) -> None:
     os.replace(tmp, path)
 
 
+# 'location:reading' tokens. Several locations sharing one reading are joined
+# with commas ('0758.081,0758.091:ma'); kXHC1983 locations may end in '*'.
 XHC_TOKEN = re.compile(r"^\d{4}\.\d{3}\*?(?:,\d{4}\.\d{3}\*?)*:(\S+)$")
+TGHZ_TOKEN = re.compile(r"^\d{3}\.\d{3}(?:,\d{3}\.\d{3})*:(\S+)$")
 
 
-def parse_xhc1983(value: str) -> list[str]:
-    """kXHC1983 is space-separated 'location:reading' tokens. Several locations
-    sharing one reading are joined with commas ('0758.081,0758.091:ma'); a
-    location may carry a '*' marker. Returns the distinct readings in order."""
+def parse_located_readings(value: str, token_re: re.Pattern[str]) -> list[str]:
+    """The distinct readings of a space-separated 'location:reading' value, in order."""
     readings: list[str] = []
     for token in value.split(" "):
-        m = XHC_TOKEN.match(token)
+        m = token_re.match(token)
         if not m:
-            raise ValueError(f"unexpected kXHC1983 token {token!r} in {value!r}")
+            raise ValueError(f"unexpected token {token!r} in {value!r}")
         reading = nfc(m.group(1))
         if reading not in readings:
             readings.append(reading)
     return readings
 
 
-def load_unihan_readings() -> tuple[dict[str, list[str]], dict[str, str], str]:
-    """Returns (kXHC1983 readings, first kMandarin value, Unicode version)."""
+def codepoint_char(cp: str) -> str:
+    return chr(int(cp.removeprefix("U+"), 16))
+
+
+@dataclass
+class Unihan:
+    version: str
+    xhc1983: dict[str, list[str]]  # kXHC1983: 现代汉语词典 (1983) readings
+    mandarin: dict[str, str]  # first kMandarin value: the most customary reading
+    tghz2013: dict[str, set[str]]  # kTGHZ2013: 通用规范汉字字典 (2013) readings
+    simplified: dict[str, list[str]]  # kSimplifiedVariant, excluding the character itself
+
+    def modern_readings(self, ch: str) -> tuple[set[str] | None, str]:
+        """kTGHZ2013 readings for ch, or for its simplified form(s) when ch is a
+        traditional character the 2013 standard doesn't list. (None, "") if
+        there is no data either way."""
+        if ch in self.tghz2013:
+            return self.tghz2013[ch], ch
+        via = [s for s in self.simplified.get(ch, []) if s in self.tghz2013]
+        if via:
+            return set().union(*(self.tghz2013[s] for s in via)), "".join(via)
+        return None, ""
+
+
+def load_unihan() -> Unihan:
     ensure_download(UNIHAN_URL, UNIHAN_ZIP)
-    xhc: dict[str, list[str]] = {}
-    mandarin: dict[str, str] = {}
-    version = "unknown"
+    u = Unihan("unknown", {}, {}, {}, {})
     with zipfile.ZipFile(UNIHAN_ZIP) as z:
-        with z.open("Unihan_Readings.txt") as f:
-            for raw in f:
-                line = raw.decode("utf-8").rstrip("\n")
-                if line.startswith("# Unicode Version"):
-                    version = line.removeprefix("# Unicode Version").strip()
-                if not line or line.startswith("#"):
-                    continue
-                codepoint, field, value = line.split("\t")
-                ch = chr(int(codepoint[2:], 16))
-                if field == "kXHC1983":
-                    xhc[ch] = parse_xhc1983(value)
-                elif field == "kMandarin":
-                    mandarin[ch] = nfc(value.split(" ")[0])
-    return xhc, mandarin, version
+        for name in ("Unihan_Readings.txt", "Unihan_Variants.txt"):
+            with z.open(name) as f:
+                for raw in f:
+                    line = raw.decode("utf-8").rstrip("\n")
+                    if line.startswith("# Unicode Version"):
+                        u.version = line.removeprefix("# Unicode Version").strip()
+                    if not line or line.startswith("#"):
+                        continue
+                    codepoint, field, value = line.split("\t")
+                    ch = codepoint_char(codepoint)
+                    if field == "kXHC1983":
+                        u.xhc1983[ch] = parse_located_readings(value, XHC_TOKEN)
+                    elif field == "kMandarin":
+                        u.mandarin[ch] = nfc(value.split(" ")[0])
+                    elif field == "kTGHZ2013":
+                        u.tghz2013[ch] = set(parse_located_readings(value, TGHZ_TOKEN))
+                    elif field == "kSimplifiedVariant":
+                        u.simplified[ch] = [s for s in map(codepoint_char, value.split(" ")) if s != ch]
+    return u
 
 
 # ---------------------------------------------------------------------------
