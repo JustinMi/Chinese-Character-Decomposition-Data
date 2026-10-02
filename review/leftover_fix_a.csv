@@ -1,0 +1,51 @@
+character,outcome,reason,phonetic_from_hint,decomposition,top_level_parts,note,original_type,etymology_type,etymology_phonetic,etymology_semantic,etymology_hint
+亭,partial,"the other top-level part is a compound (⿳亠口冖), not a single component",丁,⿱⿳亠口冖丁,⿳亠口冖 丁,,pictographic,pictophonetic,丁,,"亠, 口, and 冖 form a picture of a pavilion; 丁 provides the pronunciation"
+俩,skipped,phonetic 寿 does not appear in the decomposition,寿,⿰亻两,,,ideographic,ideographic,,,A couple 寿; 寿 also provides the pronunciation
+冥,partial,2 other top-level parts (冖 日),六,⿳冖日六,冖 日 六,,ideographic,pictophonetic,六,,"The sun 日, covered 冖, with 六 providing the pronunciation"
+友,partial,the other top-level part is unknown (?),又,⿸?又,? 又,,ideographic,pictophonetic,又,,"Two hands 又 joined, representing friendship; 又 also provides the pronunciation"
+姜,skipped,phonetic 畺 does not appear in the decomposition,畺,⿱羊女,,,ideographic,ideographic,,,Simplified form of 薑; grass 艹 provides the meaning while 畺 provides the pronunciation
+学,partial,"phonetic ⺍ is nested, not a top-level part",⺍,⿱⿱⺍冖子,⿱⺍冖 子,⺍ is inside ⿱⺍冖,ideographic,pictophonetic,⺍,,A building 冖 where children 子 study; ⺍ provides the pronunciation
+寐,partial,"phonetic 未 is nested, not a top-level part",未,⿱宀⿰爿未,宀 ⿰爿未,未 is inside ⿰爿未,ideographic,pictophonetic,未,,A bed 爿 in a house 宀; 未 provides the pronunciation
+寶,partial,2 other top-level parts (宀 貝),珤,⿳宀珤貝,宀 珤 貝,,ideographic,pictophonetic,珤,,Valuables 貝 kept in one's house 宀; 珤 also provides the pronunciation
+尋,partial,2 other top-level parts (彐 ⿰工口),寸,⿳彐⿰工口寸,彐 ⿰工口 寸,,ideographic,pictophonetic,寸,,A hand 彐 looking 工 for an item 口; 寸 provides the pronunciation
+少,partial,hint says 小 provides both the pronunciation and the meaning,小,⿱小丿,小 丿,,pictographic,pictophonetic,小,,Grains of sand; 小 provides the pronunciation and meaning
+层,skipped,phonetic 曾 does not appear in the decomposition,曾,⿸尸云,,,ideographic,ideographic,,,Simplified form of 層; 曾 provides the pronunciation
+岸,partial,"phonetic 干 is nested, not a top-level part",干,⿱山⿸厂干,山 ⿸厂干,干 is inside ⿸厂干,ideographic,pictophonetic,干,,A mountain 山 cliff 厂; 干 provides the pronunciation
+幂,partial,"the other top-level part is a compound (⿱旲巾), not a single component",冖,⿱冖⿱旲巾,冖 ⿱旲巾,,ideographic,pictophonetic,冖,,A cover 冖 cloth 巾; 冖 also provides the pronunciation
+幽,partial,"phonetic 幺 is nested, not a top-level part",幺,⿻山⿰幺幺,山 ⿰幺幺,幺 is inside ⿰幺幺,ideographic,pictophonetic,幺,,Small niches 幺 in the mountainside 山; 幺 also provides the pronunciation
+归,skipped,phonetic 追 does not appear in the decomposition,追,⿰?彐,,,ideographic,ideographic,,,Simplified form of 歸; a wife 帚 returning home; 追 provides the pronunciation
+後,partial,"phonetic 幺 is nested, not a top-level part",幺,⿰彳⿱幺夂,彳 ⿱幺夂,幺 is inside ⿱幺夂,ideographic,pictophonetic,幺,,One step 彳 coming behind another 夂; 幺 provides the pronunciation
+憲,partial,"phonetic 心 is nested, not a top-level part",心,⿱宀⿱龶⿱罒心,宀 ⿱龶⿱罒心,心 is inside ⿱龶⿱罒心,ideographic,pictophonetic,心,,Rules 宀 for living 龶; 心 provides the pronunciation
+扫,skipped,phonetic 帚 does not appear in the decomposition,帚,⿰扌彐,,,ideographic,ideographic,,,Simplified form of 掃; to use 扌 a broom 帚; 帚 also provides the pronunciation
+旄,partial,"phonetic 毛 is nested, not a top-level part",毛,⿰方⿱?毛,方 ⿱?毛,毛 is inside ⿱?毛,ideographic,pictophonetic,毛,,A flag 方 made of fur 毛; 毛 also provides the pronunciation
+暹,partial,"phonetic 隹 is nested, not a top-level part",隹,⿺辶⿱日隹,辶 ⿱日隹,隹 is inside ⿱日隹,ideographic,pictophonetic,隹,,The sun 日 moving 辶; 隹 provides the pronunciation
+替,partial,"the other top-level part is a compound (⿰夫夫), not a single component",日,⿱⿰夫夫日,⿰夫夫 日,,ideographic,pictophonetic,日,,One man 夫 replacing another; 日 provides the pronunciation
+望,partial,"phonetic 亡 is nested, not a top-level part",亡,⿱⿰亡月王,⿰亡月 王,亡 is inside ⿰亡月,ideographic,pictophonetic,亡,,A king 王 gazing at the moon 月; 亡 provides the pronunciation
+條,partial,2 other top-level parts (亻 丨),条,⿲亻丨条,亻 丨 条,,ideographic,pictophonetic,条,,A person 亻 counting 丨; 条 provides the pronunciation
+涩,partial,"phonetic 止 is nested, not a top-level part",止,⿰氵⿱刃止,氵 ⿱刃止,止 is inside ⿱刃止,ideographic,pictophonetic,止,,Water 氵 that cuts like a knife 刃; 止 provides the pronunciation
+準,skipped,phonetic 隹 does not appear in the decomposition,隹,⿱淮十,,隹 appears inside 淮 (⿰氵隹),ideographic,ideographic,,,To balance 十 water 氵 in a spirit level; 隹 provides the pronunciation
+灰,partial,the other top-level part is unknown (?),火,⿸?火,? 火,,ideographic,pictophonetic,火,,The remains of a fire 火; 火 also provides the pronunciation
+畬,skipped,phonetic 佘 does not appear in the decomposition,佘,⿱余田,,,ideographic,ideographic,,,An extra 余 field 田; 佘 provides the pronunciation; compare 畲
+疆,partial,"the other top-level part is a compound (⿹弓土), not a single component",畺,⿰⿹弓土畺,⿹弓土 畺,,ideographic,pictophonetic,畺,,A bow 弓 and arrow 土 used to defend a border 畺; 畺 also provides the pronunciation
+瞢,partial,"phonetic 罒 is nested, not a top-level part",罒,⿱⿳艹罒冖目,⿳艹罒冖 目,罒 is inside ⿳艹罒冖,ideographic,pictophonetic,罒,,To cover 冖 one's eyes 目; 罒 provides the pronunciation
+禧,skipped,phonetic 壴 does not appear in the decomposition,壴,⿰礻喜,,壴 appears inside 喜 (⿱壴口),ideographic,ideographic,,,Celebrating 喜 good fortune 礻; 壴 also provides the pronunciation
+私,partial,hint says 厶 provides both the pronunciation and the meaning,厶,⿰禾厶,禾 厶,,ideographic,pictophonetic,厶,,厶 provides the meaning and pronunciation
+筱,skipped,phonetic 小 does not appear in the decomposition,小,⿱⺮攸,,,ideographic,ideographic,,,Distant 攸 bamboo ⺮; 小 provides the pronunciation
+箧,partial,"phonetic 夹 is nested, not a top-level part",夹,⿱⺮⿷匚夹,⺮ ⿷匚夹,夹 is inside ⿷匚夹,ideographic,pictophonetic,夹,,A bamboo ⺮ box 匚; 夹 provides the pronunciation
+築,partial,"the other top-level part is a compound (⿱巩木), not a single component",⺮,⿱⺮⿱巩木,⺮ ⿱巩木,,ideographic,pictophonetic,⺮,,A building 巩 of bamboo ⺮ and wood 木; ⺮also provides the pronunciation
+篦,partial,2 other top-level parts (⺮ 囟),比,⿳⺮囟比,⺮ 囟 比,,ideographic,pictophonetic,比,,A bamboo ⺮ hair 囟 comb; 比 provides the pronunciation
+累,skipped,phonetic 畾 does not appear in the decomposition,畾,⿱田糸,,,ideographic,ideographic,,,Simplified form of 纍; growing silk 糸 in the fields 畾; 畾 also provides the pronunciation
+絕,partial,"phonetic 巴 is nested, not a top-level part",巴,⿰糹⿱刀巴,糹 ⿱刀巴,巴 is inside ⿱刀巴,ideographic,pictophonetic,巴,,To cut 刀 thread 糹; 巴 provides the pronunciation
+莅,skipped,phonetic 立 does not appear in the decomposition,立,⿱艹位,,立 appears inside 位 (⿰亻立),ideographic,ideographic,,,A place 位 where grass 艹 grows; 立 also provides the pronunciation
+號,skipped,phonetic 丂 does not appear in the decomposition,丂,⿰号虎,,丂 appears inside 号 (⿱口丂),ideographic,ideographic,,,The roar 口 of the tiger 虎; 丂 provides the pronunciation
+衡,partial,"the other top-level part is a compound (⿱角大), not a single component",行,⿻行⿱角大,行 ⿱角大,,ideographic,pictophonetic,行,,A big 大 horn 角; 行 provides the pronunciation
+解,partial,"the other top-level part is a compound (⿱刀牛), not a single component",角,⿰角⿱刀牛,角 ⿱刀牛,,ideographic,pictophonetic,角,,To cut 刀 the horns 角 off of an ox 牛; 角 also provides the pronunciation
+豐,partial,"phonetic 丰 is nested, not a top-level part",丰,⿱⿻山⿰丰丰豆,⿻山⿰丰丰 豆,丰 is inside ⿻山⿰丰丰,ideographic,pictophonetic,丰,,A bean plant 豆 with much fruit 丰; 丰 also provides the pronunciation
+賓,partial,2 other top-level parts (宀 小),貝,⿳宀小貝,宀 小 貝,,ideographic,pictophonetic,貝,,Someone 小 living under one's roof 宀; 貝 also provides the pronunciation
+醢,partial,"phonetic 右 is nested, not a top-level part",右,⿰酉⿱右皿,酉 ⿱右皿,右 is inside ⿱右皿,ideographic,pictophonetic,右,,Meat 皿 left in wine 酉; 右 provides the pronunciation
+銾,skipped,phonetic 工 does not appear in the decomposition,工,⿰釒汞,,工 appears inside 汞 (⿱工水),ideographic,ideographic,,,Metal 釒 that flows like water 水; 工 provides the pronunciation
+鑿,partial,"phonetic 殳 is nested, not a top-level part",殳,⿱⿰⿱丵臼殳金,⿰⿱丵臼殳 金,殳 is inside ⿰⿱丵臼殳,ideographic,pictophonetic,殳,,A metal 金 drill 丵 boring a hole 臼; 殳 provides the pronunciation
+陞,partial,"phonetic 升 is nested, not a top-level part",升,⿰阝⿱升土,阝 ⿱升土,升 is inside ⿱升土,ideographic,pictophonetic,升,,To pile up 升 earth 土 to form a mound 阝; 升 also provides the pronunciation
+隙,partial,"the other top-level part is a compound (⿱小⿱日小), not a single component",阝,⿰阝⿱小⿱日小,阝 ⿱小⿱日小,,ideographic,pictophonetic,阝,,A crack 日 dividing two things 小; 阝 provides the pronunciation
+齒,partial,"the other top-level part is a compound (⿶凵⿳从一从), not a single component",止,⿱止⿶凵⿳从一从,止 ⿶凵⿳从一从,,pictographic,pictophonetic,止,,Upper and lower teeth 从; 止 provides the pronunciation
+齿,partial,"the other top-level part is a compound (⿶凵人), not a single component",止,⿱止⿶凵人,止 ⿶凵人,,pictographic,pictophonetic,止,,Teeth 人凵; 止 provides the pronunciation
