@@ -1,1 +1,8 @@
 .DS_Store
+
+# local Python environment
+.venv/
+__pycache__/
+
+# third-party source data (downloaded on demand by the scripts)
+sources/
