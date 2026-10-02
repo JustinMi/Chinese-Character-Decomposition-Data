@@ -1,0 +1,17 @@
+{"character": "吓", "field": "pinyin", "old": ["xià"], "new": ["xià", "hè"], "note": "hè = formal 'intimidate' (恐吓, 恫吓)"}
+{"character": "辟", "field": "pinyin", "old": ["pì"], "new": ["pì", "bì"], "note": "bì in 复辟, 辟邪"}
+{"character": "扛", "field": "pinyin", "old": ["káng"], "new": ["káng", "gāng"], "note": "gāng literary: 力能扛鼎"}
+{"character": "扛", "field": "definition", "old": "to lift; to carry on one's shoulders", "new": "to lift; to carry on one's shoulders; to endure, to withstand (pressure); to shoulder (a responsibility)", "note": "dominant colloquial sense: 扛住, 扛不住"}
+{"character": "噪", "field": "definition", "old": "to be noisy; to chirp loudly", "new": "noise; to be noisy; to chirp loudly", "note": "modern use is mostly the noun: 噪音, 噪声"}
+{"character": "倔", "field": "pinyin", "old": ["jué"], "new": ["jué", "juè"], "note": "juè = gruff: 倔脾气"}
+{"character": "拓", "field": "pinyin", "old": ["tà"], "new": ["tuò", "tà"], "note": "tuò is the everyday reading and matches the definition"}
+{"character": "拓", "field": "definition", "old": "to develop, to expand, to open up", "new": "to develop, to expand, to open up; (tà) to make a rubbing of an inscription", "note": "tà sense: 拓片"}
+{"character": "恶", "field": "pinyin", "old": ["è"], "new": ["è", "wù", "ě", "wū"], "note": "wù = to hate (厌恶), ě = nauseating (恶心)"}
+{"character": "钻", "field": "pinyin", "old": ["zuān"], "new": ["zuān", "zuàn"], "note": "zuàn = diamond / a drill (钻石, 电钻)"}
+{"character": "侥", "field": "pinyin", "old": ["jiǎo"], "new": ["jiǎo", "yáo"], "note": "yáo is rare"}
+{"character": "缴", "field": "pinyin", "old": ["jiǎo"], "new": ["jiǎo", "zhuó"], "note": "zhuó is rare/literary"}
+{"character": "贼", "field": "etymology_phonetic", "old": "贝", "new": "则", "note": "Shuowen: 则 is the phonetic; it's obscured in the modern glyph"}
+{"character": "君", "field": "definition", "old": "sovereign, ruler, prince, monarch, chief", "new": "sovereign, ruler, prince, monarch, chief; (respectful) gentleman, Mr.; (literary) you", "note": "张君, 诸君"}
+{"character": "侃", "field": "definition", "old": "upright and strong; amiable", "new": "upright and strong; amiable; to chat idly, to chatter", "note": "dominant modern sense: 侃大山"}
+{"character": "燕", "field": "pinyin", "old": ["yàn"], "new": ["yàn", "yān"], "note": "yān in 燕山, 燕国"}
+{"character": "燕", "field": "etymology_type", "old": "ideographic", "new": "pictographic", "note": "the hint describes a single picture of a swallow"}
