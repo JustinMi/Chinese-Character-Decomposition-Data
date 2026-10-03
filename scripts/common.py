@@ -20,13 +20,14 @@ import zipfile
 from dataclasses import dataclass
 from typing import Any
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
-DICT_PATH = os.path.join(ROOT, "dictionary.jsonl")
-ORIGINAL_PATH = os.path.join(ROOT, "dictionary.original.jsonl")
-CHANGELOG_PATH = os.path.join(ROOT, "changelog.jsonl")
-CORRECTIONS_PATH = os.path.join(ROOT, "corrections.jsonl")
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(ROOT, "data")
+DICT_PATH = os.path.join(DATA_DIR, "dictionary.jsonl")
+ORIGINAL_PATH = os.path.join(DATA_DIR, "dictionary.original.jsonl")
+CHANGELOG_PATH = os.path.join(DATA_DIR, "changelog.jsonl")
+CORRECTIONS_PATH = os.path.join(DATA_DIR, "corrections.jsonl")
 REVIEW_DIR = os.path.join(ROOT, "review")
-SOURCES_DIR = os.path.join(ROOT, "sources")
+SOURCES_DIR = os.path.join(DATA_DIR, "sources")
 
 UNIHAN_URL = "https://www.unicode.org/Public/UCD/latest/ucd/Unihan.zip"
 UNIHAN_ZIP = os.path.join(SOURCES_DIR, "Unihan.zip")

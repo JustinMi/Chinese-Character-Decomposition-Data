@@ -62,10 +62,11 @@ def convert_to_jsonl(input_file: str, output_file: str) -> None:
 
 
 if __name__ == "__main__":
-    input_file = "dictionary.json"
-    output_file = "dictionary.jsonl"
+    data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+    input_file = os.path.join(data_dir, "dictionary.json")
+    output_file = os.path.join(data_dir, "dictionary.jsonl")
     # dictionary.jsonl now holds the fixes logged in changelog.jsonl; the
     # pipeline (README.md) maintains it, so never regenerate it from here.
     if os.path.exists(output_file):
-        raise SystemExit(f"{output_file} already exists; not overwriting it (see README.md)")
+        raise SystemExit("data/dictionary.jsonl already exists; not overwriting it (see README.md)")
     convert_to_jsonl(input_file, output_file)

@@ -5,4 +5,4 @@
 __pycache__/
 
 # third-party source data (downloaded on demand by the scripts)
-sources/
+data/sources/

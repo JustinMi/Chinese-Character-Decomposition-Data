@@ -10,8 +10,8 @@ dictionary.db is then rebuilt from dictionary.json with build_db.py.
 This runs automatically whenever a phase writes dictionary.jsonl; run it by
 hand only to check or repair the derived files.
 
-    python3 export_json_db.py            # dry run: report what would change
-    python3 export_json_db.py --write    # write dictionary.json and dictionary.db
+    python3 scripts/export_json_db.py            # dry run: report what would change
+    python3 scripts/export_json_db.py --write    # write dictionary.json and dictionary.db
 """
 
 import argparse
@@ -20,12 +20,12 @@ import os
 from typing import Any
 
 import build_db
-from common import DICT_PATH, ORIGINAL_PATH, ROOT, Entry, load_entries
+from common import DATA_DIR, DICT_PATH, ORIGINAL_PATH, Entry, load_entries
 from convert_to_jsonl import flatten_dict
 
-JSON_PATH = os.path.join(ROOT, "dictionary.json")
-ORIGINAL_JSON_PATH = os.path.join(ROOT, "dictionary.original.json")
-DB_PATH = os.path.join(ROOT, "dictionary.db")
+JSON_PATH = os.path.join(DATA_DIR, "dictionary.json")
+ORIGINAL_JSON_PATH = os.path.join(DATA_DIR, "dictionary.original.json")
+DB_PATH = os.path.join(DATA_DIR, "dictionary.db")
 
 ENTRY_KEYS = ["character", "definition", "pinyin", "decomposition", "etymology", "radical", "matches"]
 ETYMOLOGY_KEYS = ["type", "phonetic", "semantic", "hint"]

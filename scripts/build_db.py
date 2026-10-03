@@ -1,5 +1,8 @@
 import json
+import os
 import sqlite3
+
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 
 CREATE_TABLE = """
 CREATE TABLE IF NOT EXISTS characters (
@@ -25,7 +28,10 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 """
 
 
-def main(json_path: str = "dictionary.json", db_path: str = "dictionary.db") -> None:
+def main(
+    json_path: str = os.path.join(DATA_DIR, "dictionary.json"),
+    db_path: str = os.path.join(DATA_DIR, "dictionary.db"),
+) -> None:
     with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
 

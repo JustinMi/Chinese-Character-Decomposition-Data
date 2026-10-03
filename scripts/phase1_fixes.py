@@ -13,8 +13,8 @@ Fix B  Add the readings from Unihan kXHC1983 that pinyin is missing, ordered:
 
 Dry run by default; pass --write to apply.
 
-    python3 phase1_fixes.py            # dry run
-    python3 phase1_fixes.py --write    # apply, log, validate
+    python3 scripts/phase1_fixes.py            # dry run
+    python3 scripts/phase1_fixes.py --write    # apply, log, validate
 """
 
 import argparse

@@ -12,8 +12,8 @@ resolve them. Needs OpenCC (see requirements.txt).
 
 Dry run by default; pass --write to write the CSVs.
 
-    .venv/bin/python phase2_reports.py            # dry run
-    .venv/bin/python phase2_reports.py --write    # write review/*.csv
+    .venv/bin/python scripts/phase2_reports.py            # dry run
+    .venv/bin/python scripts/phase2_reports.py --write    # write review/*.csv
 """
 
 import argparse
