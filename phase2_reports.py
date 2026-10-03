@@ -123,10 +123,13 @@ class CjkviIds:
     def mainland(self, ch: str) -> str:
         """The mainland-China (G) decomposition: the first G-tagged IDS, else the
         first untagged one. '' if none, or if cjkvi treats ch as atomic."""
+        return self.regional(ch, "G")
+
+    def regional(self, ch: str, region: str) -> str:
         variants = self.ids.get(ch, [])
         for v in variants:
             m = re.fullmatch(r"(.*)\[([A-Z]+)\]", v)
-            if m and "G" in m.group(2):
+            if m and region in m.group(2):
                 return "" if m.group(1) == ch else m.group(1)
         for v in variants:
             if not re.search(r"\[[A-Z]+\]$", v):
@@ -170,6 +173,12 @@ def traditional_components(entries: list[Entry], zh: Chinese, cjkvi: CjkviIds) -
                 continue
             tdec = by[t]["decomposition"]
             if tdec == dec:
+                # cjkvi gives some pairs one IDS too: 搖 (Taiwan) and 摇
+                # (mainland) are both ⿰扌䍃, and they differ only inside 䍃's
+                # regional glyphs, which Unicode doesn't encode separately.
+                same = cjkvi.mainland(h)
+                if same and same == cjkvi.regional(t, "T"):
+                    continue
                 checks.append("copied_decomposition")
                 reasons.append(f"identical to {t}'s decomposition")
                 compared = t
