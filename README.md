@@ -8,11 +8,14 @@ the untouched original.
 |---|---|
 | `dictionary.jsonl` | the fixed dictionary |
 | `dictionary.original.jsonl` | the original, read-only. Never edit it. |
+| `dictionary.json`, `dictionary.db` | nested and SQLite copies, kept in sync with `dictionary.jsonl` |
+| `dictionary.original.json` | the original nested data, read-only. Never edit it. |
 | `changelog.jsonl` | every change: `{"character", "field", "old", "new", "rule"}` |
 | `corrections.jsonl` | manual patches, one per line |
 | `review/*.csv` | problems that need a human decision |
 | `phase1_fixes.py`, `phase2_reports.py`, `apply_corrections.py` | one script per phase |
 | `common.py` | shared code: IDS parser, Unihan loader, validator |
+| `export_json_db.py` | carries the fixes into `dictionary.json` and `dictionary.db` |
 | `rebuild.sh` | re-runs every phase from the original |
 
 ## Setup
@@ -36,14 +39,21 @@ fields, field order and JSON formatting; and replaying `changelog.jsonl` over
 the original reproduces the file exactly, with each rule touching only its
 own fields. Running a script twice makes no new changes.
 
+Every write also refreshes `dictionary.json` and `dictionary.db`.
+`export_json_db.py` rebuilds `dictionary.json` from
+`dictionary.original.json`, writing in only the fields that changed (stroke
+`matches` and formatting stay as they were). It writes nothing unless
+`convert_to_jsonl.py`'s flattening of the result reproduces
+`dictionary.jsonl` exactly. Then `build_db.py` rebuilds `dictionary.db`.
+
 ```bash
 .venv/bin/python phase1_fixes.py --write       # 1. automated fixes
 .venv/bin/python phase2_reports.py --write     # 2. review/*.csv (only reads the dictionary)
 .venv/bin/python apply_corrections.py --write  # 3. manual patches, applied last so they win
 ```
 
-To rebuild everything from `dictionary.original.jsonl` (refuses to run if
-`dictionary.jsonl` or `changelog.jsonl` have uncommitted changes):
+To rebuild everything from the originals (refuses to run if any of the files
+it rewrites have uncommitted changes):
 
 ```bash
 ./rebuild.sh
@@ -57,7 +67,8 @@ Append patches to `corrections.jsonl`:
 {"character": "吓", "field": "pinyin", "old": ["xià"], "new": ["xià", "hè"], "note": "...", "source": "study 2026-10-02"}
 ```
 
-Then dry-run, apply, refresh the reports, and commit (e.g. `corrections: 吓 辟 扛`):
+Then dry-run, apply, refresh the reports, and commit everything that changed,
+including `dictionary.json` and `dictionary.db` (e.g. `corrections: 吓 辟 扛`):
 
 ```bash
 python3 apply_corrections.py
@@ -107,7 +118,5 @@ normalization and are never removed.
 Reports reflect the current `dictionary.jsonl`, so rows drop off as patches
 resolve them.
 
-**Don't run `convert_to_jsonl.py`.** It regenerates `dictionary.jsonl` from
-`dictionary.json` and would discard every fix. If you do run it,
-`git checkout dictionary.jsonl` restores the fixed file. `dictionary.json` and
-`dictionary.db` (built by `build_db.py`) don't include these fixes.
+`convert_to_jsonl.py` made the original `dictionary.jsonl`; it now refuses to
+overwrite an existing one.

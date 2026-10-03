@@ -6,7 +6,8 @@ Phase scripts:
     apply_corrections.py  manual patches from corrections.jsonl
 
 Every write goes through `commit_changes`, which validates the new state
-before replacing dictionary.jsonl and validates the file again afterwards.
+before replacing dictionary.jsonl, validates the file again afterwards, and
+carries the fixes into dictionary.json and dictionary.db (export_json_db.py).
 """
 
 import json
@@ -341,8 +342,9 @@ def validate_file() -> list[str]:
 
 
 def commit_changes(entries: list[Entry], new_changes: list[dict[str, Any]]) -> None:
-    """Validate, then atomically replace dictionary.jsonl and append to the
-    changelog. Nothing is written if validation fails."""
+    """Validate, then atomically replace dictionary.jsonl, append to the
+    changelog, and carry the fixes into dictionary.json and dictionary.db.
+    Nothing is written if validation fails."""
     if not new_changes:
         errors = validate_file()
         if errors:
@@ -354,6 +356,12 @@ def commit_changes(entries: list[Entry], new_changes: list[dict[str, Any]]) -> N
     errors = validate_lines(lines, load_entries(ORIGINAL_PATH), changelog)
     if errors:
         raise SystemExit("Validation failed, nothing written:\n  " + "\n  ".join(errors[:50]))
+    import export_json_db  # imported here because it imports this module
+
+    try:
+        exported, _ = export_json_db.build(entries)
+    except ValueError as ex:
+        raise SystemExit(f"dictionary.json export failed, nothing written: {ex}")
 
     tmp = DICT_PATH + ".tmp"
     with open(tmp, "w", encoding="utf-8", newline="\n") as f:
@@ -366,7 +374,9 @@ def commit_changes(entries: list[Entry], new_changes: list[dict[str, Any]]) -> N
     errors = validate_file()
     if errors:
         raise SystemExit("POST-WRITE VALIDATION FAILED:\n  " + "\n  ".join(errors[:50]))
-    print(f"Wrote {os.path.relpath(DICT_PATH, ROOT)} and {len(new_changes)} changelog line(s); validation passed.")
+    export_json_db.write(exported)
+    print(f"Wrote {os.path.relpath(DICT_PATH, ROOT)} and {len(new_changes)} changelog line(s); validation passed. "
+          "Updated dictionary.json and dictionary.db.")
 
 
 def fmt(v: Any) -> str:

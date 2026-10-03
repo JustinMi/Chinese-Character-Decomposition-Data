@@ -25,11 +25,11 @@ VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 """
 
 
-def main() -> None:
-    with open("dictionary.json", encoding="utf-8") as f:
+def main(json_path: str = "dictionary.json", db_path: str = "dictionary.db") -> None:
+    with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
 
-    con = sqlite3.connect("dictionary.db")
+    con = sqlite3.connect(db_path)
     con.execute(CREATE_TABLE)
 
     with con:

@@ -1,6 +1,6 @@
 #!/bin/sh
-# Rebuild dictionary.jsonl, changelog.jsonl and review/ from
-# dictionary.original.jsonl by running every phase in order.
+# Rebuild dictionary.jsonl, changelog.jsonl, dictionary.json, dictionary.db
+# and review/ from the originals by running every phase in order.
 set -eu
 cd "$(dirname "$0")"
 
@@ -10,8 +10,9 @@ if [ ! -x "$PY" ]; then
     exit 1
 fi
 if git rev-parse --git-dir >/dev/null 2>&1 &&
-    [ -n "$(git status --porcelain -- dictionary.jsonl changelog.jsonl)" ]; then
-    echo "dictionary.jsonl or changelog.jsonl has uncommitted changes; commit or discard them first." >&2
+    [ -n "$(git status --porcelain -- dictionary.jsonl changelog.jsonl dictionary.json dictionary.db)" ]; then
+    echo "dictionary.jsonl, changelog.jsonl, dictionary.json or dictionary.db has uncommitted changes;" \
+        "commit or discard them first." >&2
     exit 1
 fi
 

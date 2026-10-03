@@ -1,4 +1,5 @@
 import json
+import os
 from typing import Any
 
 # Ensure the fields are in the correct order
@@ -63,4 +64,8 @@ def convert_to_jsonl(input_file: str, output_file: str) -> None:
 if __name__ == "__main__":
     input_file = "dictionary.json"
     output_file = "dictionary.jsonl"
+    # dictionary.jsonl now holds the fixes logged in changelog.jsonl; the
+    # pipeline (README.md) maintains it, so never regenerate it from here.
+    if os.path.exists(output_file):
+        raise SystemExit(f"{output_file} already exists; not overwriting it (see README.md)")
     convert_to_jsonl(input_file, output_file)
