@@ -26,6 +26,8 @@ scripts/
   convert_to_jsonl.py        made the original dictionary.jsonl from dictionary.json
 docs/
   dictionary_schema_description.md   the Make Me a Hanzi data format
+skill/
+  dictionary-corrections/    source of the Claude skill for applying patch batches
 ```
 
 ## Setup
@@ -72,27 +74,40 @@ scripts/rebuild.sh
 
 ## Adding corrections
 
-Append patches to `data/corrections.jsonl`:
+A patch is one JSON line:
 
 ```json
 {"character": "吓", "field": "pinyin", "old": ["xià"], "new": ["xià", "hè"], "note": "...", "source": "study 2026-10-02"}
 ```
 
-Then dry-run, apply, refresh the reports, and commit everything that changed,
-including `dictionary.json` and `dictionary.db` (e.g. `corrections: 吓 辟 扛`):
+Save a batch of them to a file (text pasted from chat, code fences and all, is
+fine). Check it, add it to `data/corrections.jsonl`, dry-run, apply, refresh
+the reports, and commit everything that changed, including `dictionary.json`
+and `dictionary.db` (e.g. `corrections: 吓 辟 扛 (3 patches)`):
 
 ```bash
+python3 scripts/apply_corrections.py check batch.jsonl
+python3 scripts/apply_corrections.py add batch.jsonl
 python3 scripts/apply_corrections.py
 python3 scripts/apply_corrections.py --write
 .venv/bin/python scripts/phase2_reports.py --write
 ```
 
-A patch applies when the field's current value, or its value in the original,
-equals `old`. A patch whose `new` is already in effect is skipped silently.
-Anything else is reported as a conflict and not applied. Allowed fields:
-`definition`, `pinyin`, `decomposition`, `etymology_type`,
-`etymology_semantic`, `etymology_phonetic`, `etymology_hint`. Re-running
-phase 1 never touches a field a patch has set.
+`add` skips patches already recorded (same character, field, `old` and
+`new`) and adds nothing unless the whole batch is valid. A patch applies when
+the field's current value, or its value in the original, equals `old`. A
+patch whose `new` is already in effect is skipped silently. Anything else is
+reported as a conflict and not applied. Allowed fields: `definition`,
+`pinyin`, `decomposition`, `etymology_type`, `etymology_semantic`,
+`etymology_phonetic`, `etymology_hint`.
+
+Patches never remove a pinyin reading, including one an automated fix added,
+unless they say `"allow_removal": true`. Re-running phase 1 never touches a
+field a patch has set. The exit status is 0 when everything is clean, 1 for
+conflicts or invalid patches, and 2 for a missing file.
+
+This is the same workflow as the `dictionary-corrections` skill, whose
+source is in `skill/`; its script runs this one.
 
 ## What the phases do
 
