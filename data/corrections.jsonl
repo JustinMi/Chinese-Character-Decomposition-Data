@@ -49,3 +49,4 @@
 {"character": "綮", "field": "pinyin", "old": ["qǐ"], "new": ["qǐ", "qìng"], "note": "qìng per kMandarin and kTGHZ2013; listed after qǐ, which the definition describes", "source": "review follow-up 2026-10-03"}
 {"character": "廷", "field": "etymology_phonetic", "old": "", "new": "壬", "note": "Shuowen 从廴壬声; this 壬 is historically 𡈼 (tǐng), merged in shape with 壬 rén", "source": "study 2026-10-02"}
 {"character": "廷", "field": "definition", "old": "courtyard", "new": "imperial court, royal court; (archaic) courtyard, now written 庭", "note": "modern use: 朝廷, 宫廷, 教廷", "source": "study 2026-10-02"}
+{"character": "腔", "field": "definition", "old": "chest cavity; a hollow in the body", "new": "cavity; a hollow in the body; tune; accent; tone of voice", "note": "Added common 'accent/tone of voice' sense (腔调, 京腔, 打官腔, 开腔)", "source": "study 2026-10-03"}

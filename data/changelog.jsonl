@@ -3059,3 +3059,4 @@
 {"character": "綮", "field": "pinyin", "old": ["qǐ"], "new": ["qǐ", "qìng"], "rule": "manual"}
 {"character": "廷", "field": "etymology_phonetic", "old": "", "new": "壬", "rule": "manual"}
 {"character": "廷", "field": "definition", "old": "courtyard", "new": "imperial court, royal court; (archaic) courtyard, now written 庭", "rule": "manual"}
+{"character": "腔", "field": "definition", "old": "chest cavity; a hollow in the body", "new": "cavity; a hollow in the body; tune; accent; tone of voice", "rule": "manual"}
