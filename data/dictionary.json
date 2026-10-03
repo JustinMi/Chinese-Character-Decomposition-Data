@@ -95926,13 +95926,14 @@
     },
     {
         "character": "廷",
-        "definition": "courtyard",
+        "definition": "imperial court, royal court; (archaic) courtyard, now written 庭",
         "pinyin": [
             "tíng"
         ],
         "decomposition": "⿺廴壬",
         "etymology": {
             "type": "pictophonetic",
+            "phonetic": "壬",
             "semantic": "廴",
             "hint": "place"
         },

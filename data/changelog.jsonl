@@ -3057,3 +3057,5 @@
 {"character": "蕃", "field": "pinyin", "old": ["fān"], "new": ["fān", "bō"], "rule": "manual"}
 {"character": "釐", "field": "pinyin", "old": ["lí"], "new": ["lí", "xī"], "rule": "manual"}
 {"character": "綮", "field": "pinyin", "old": ["qǐ"], "new": ["qǐ", "qìng"], "rule": "manual"}
+{"character": "廷", "field": "etymology_phonetic", "old": "", "new": "壬", "rule": "manual"}
+{"character": "廷", "field": "definition", "old": "courtyard", "new": "imperial court, royal court; (archaic) courtyard, now written 庭", "rule": "manual"}

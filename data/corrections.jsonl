@@ -47,3 +47,5 @@
 {"character": "蕃", "field": "pinyin", "old": ["fān"], "new": ["fān", "bō"], "note": "bō per kMandarin and kTGHZ2013; listed after fān/fán, which the definition describes", "source": "review follow-up 2026-10-03"}
 {"character": "釐", "field": "pinyin", "old": ["lí"], "new": ["lí", "xī"], "note": "xī per kMandarin and kTGHZ2013; listed after lí, which the definition describes", "source": "review follow-up 2026-10-03"}
 {"character": "綮", "field": "pinyin", "old": ["qǐ"], "new": ["qǐ", "qìng"], "note": "qìng per kMandarin and kTGHZ2013; listed after qǐ, which the definition describes", "source": "review follow-up 2026-10-03"}
+{"character": "廷", "field": "etymology_phonetic", "old": "", "new": "壬", "note": "Shuowen 从廴壬声; this 壬 is historically 𡈼 (tǐng), merged in shape with 壬 rén", "source": "study 2026-10-02"}
+{"character": "廷", "field": "definition", "old": "courtyard", "new": "imperial court, royal court; (archaic) courtyard, now written 庭", "note": "modern use: 朝廷, 宫廷, 教廷", "source": "study 2026-10-02"}
