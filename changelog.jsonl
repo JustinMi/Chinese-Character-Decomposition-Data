@@ -3015,3 +3015,13 @@
 {"character": "龈", "field": "pinyin", "old": ["kěn"], "new": ["yín", "kěn"], "rule": "fix_b"}
 {"character": "龜", "field": "pinyin", "old": ["guī"], "new": ["guī", "jūn", "qiū"], "rule": "fix_b"}
 {"character": "龟", "field": "pinyin", "old": ["guī"], "new": ["guī", "jūn", "qiū"], "rule": "fix_b"}
+{"character": "扛", "field": "definition", "old": "to lift; to carry on one's shoulders", "new": "to lift; to carry on one's shoulders; to endure, to withstand (pressure); to shoulder (a responsibility)", "rule": "manual"}
+{"character": "噪", "field": "definition", "old": "to be noisy; to chirp loudly", "new": "noise; to be noisy; to chirp loudly", "rule": "manual"}
+{"character": "拓", "field": "pinyin", "old": ["tà", "tuò"], "new": ["tuò", "tà"], "rule": "manual"}
+{"character": "拓", "field": "definition", "old": "to develop, to expand, to open up", "new": "to develop, to expand, to open up; (tà) to make a rubbing of an inscription", "rule": "manual"}
+{"character": "恶", "field": "pinyin", "old": ["è", "ě", "wù"], "new": ["è", "wù", "ě", "wū"], "rule": "manual"}
+{"character": "缴", "field": "pinyin", "old": ["jiǎo"], "new": ["jiǎo", "zhuó"], "rule": "manual"}
+{"character": "贼", "field": "etymology_phonetic", "old": "贝", "new": "则", "rule": "manual"}
+{"character": "君", "field": "definition", "old": "sovereign, ruler, prince, monarch, chief", "new": "sovereign, ruler, prince, monarch, chief; (respectful) gentleman, Mr.; (literary) you", "rule": "manual"}
+{"character": "侃", "field": "definition", "old": "upright and strong; amiable", "new": "upright and strong; amiable; to chat idly, to chatter", "rule": "manual"}
+{"character": "燕", "field": "etymology_type", "old": "ideographic", "new": "pictographic", "rule": "manual"}
