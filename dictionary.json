@@ -4266,7 +4266,7 @@
         "decomposition": "⿴二?",
         "etymology": {
             "type": "ideographic",
-            "hint": "Five elements (the cross with the extra stroke) between heaven 一 and earth 一 "
+            "hint": "Five elements (the cross with the extra stroke) between heaven 一 and earth 一"
         },
         "radical": "二",
         "matches": [
@@ -4312,7 +4312,7 @@
         "decomposition": "⿻二日",
         "etymology": {
             "type": "ideographic",
-            "hint": "Stretching from heaven 一 to earth 一 "
+            "hint": "Stretching from heaven 一 to earth 一"
         },
         "radical": "二",
         "matches": [
@@ -5872,7 +5872,7 @@
         "decomposition": "⿰亻寸",
         "etymology": {
             "type": "ideographic",
-            "hint": "To hand 寸 something over to someone 亻 "
+            "hint": "To hand 寸 something over to someone 亻"
         },
         "radical": "亻",
         "matches": [
@@ -7482,6 +7482,7 @@
         "character": "伲",
         "definition": "we (Shanghai dialect)",
         "pinyin": [
+            "ní",
             "nì"
         ],
         "decomposition": "⿰亻尼",
@@ -23049,7 +23050,7 @@
         "decomposition": "⿱八刀",
         "etymology": {
             "type": "ideographic",
-            "hint": "Pieces 八 being further subdivided with a knife 刀 "
+            "hint": "Pieces 八 being further subdivided with a knife 刀"
         },
         "radical": "刀",
         "matches": [
@@ -30258,6 +30259,7 @@
         "character": "卓",
         "definition": "profound, lofty, brilliant",
         "pinyin": [
+            "zhuó",
             "zhuō"
         ],
         "decomposition": "⿱⺊早",
@@ -40573,6 +40575,7 @@
         "character": "哮",
         "definition": "to cough; to pant; to roar",
         "pinyin": [
+            "xiào",
             "xiāo"
         ],
         "decomposition": "⿰口孝",
@@ -43473,6 +43476,7 @@
         "character": "啥",
         "definition": "what?",
         "pinyin": [
+            "shá",
             "shà"
         ],
         "decomposition": "⿰口舍",
@@ -67676,7 +67680,7 @@
         "decomposition": "⿱大镸",
         "etymology": {
             "type": "ideographic",
-            "hint": "A man 大 wrapped in a long 镸 cloth "
+            "hint": "A man 大 wrapped in a long 镸 cloth"
         },
         "radical": "大",
         "matches": [
@@ -75372,6 +75376,7 @@
         "character": "嬷",
         "definition": "mother",
         "pinyin": [
+            "mó",
             "mā"
         ],
         "decomposition": "⿰女麽",
@@ -81514,6 +81519,7 @@
         "character": "尢",
         "definition": "weak, lame",
         "pinyin": [
+            "wāng",
             "yóu"
         ],
         "decomposition": "⿸?乚",
@@ -90964,6 +90970,7 @@
         "character": "帧",
         "definition": "picture, scroll; one of a pair",
         "pinyin": [
+            "zhēn",
             "zhèng"
         ],
         "decomposition": "⿰巾贞",
@@ -149671,7 +149678,7 @@
         "decomposition": "⿱⿰氵七木",
         "etymology": {
             "type": "ideographic",
-            "hint": "Seven 七 with accents to prevent forgery "
+            "hint": "Seven 七 with accents to prevent forgery"
         },
         "radical": "木",
         "matches": [
@@ -153225,6 +153232,7 @@
         "character": "桲",
         "definition": "quince",
         "pinyin": [
+            "bó",
             "po"
         ],
         "decomposition": "⿰木孛",
@@ -160805,6 +160813,7 @@
         "character": "槭",
         "definition": "maple tree",
         "pinyin": [
+            "qì",
             "qī"
         ],
         "decomposition": "⿰木戚",
@@ -193005,6 +193014,7 @@
         "character": "潦",
         "definition": "to flood; puddle; dejected, careless",
         "pinyin": [
+            "liáo",
             "lǎo"
         ],
         "decomposition": "⿰氵尞",
@@ -218602,6 +218612,7 @@
         "character": "瑱",
         "definition": "a jade earring",
         "pinyin": [
+            "tiàn",
             "zhèn"
         ],
         "decomposition": "⿰王真",
@@ -220571,7 +220582,7 @@
         "decomposition": "⿲辛瓜辛",
         "etymology": {
             "type": "pictophonetic",
-            "phonetic": "\n\n\n\n\n\n\n\n辡",
+            "phonetic": "辡",
             "semantic": "瓜",
             "hint": "melon"
         },
@@ -221634,7 +221645,7 @@
         "decomposition": "⿻一土",
         "etymology": {
             "type": "ideographic",
-            "hint": " A shoot 屮 growing in the soil 土"
+            "hint": "A shoot 屮 growing in the soil 土"
         },
         "radical": "生",
         "matches": [
@@ -222973,7 +222984,7 @@
     },
     {
         "character": "留",
-        "definition": "to stay, to remain; to preserve, to keep; to leave a message; ",
+        "definition": "to stay, to remain; to preserve, to keep; to leave a message",
         "pinyin": [
             "liú"
         ],
@@ -272207,7 +272218,8 @@
         "character": "綮",
         "definition": "embroidered banner",
         "pinyin": [
-            "qǐ"
+            "qǐ",
+            "qìng"
         ],
         "decomposition": "⿱⿰户攵糸",
         "etymology": {
@@ -280550,6 +280562,7 @@
         "character": "绩",
         "definition": "achievements, merit",
         "pinyin": [
+            "jì",
             "jī"
         ],
         "decomposition": "⿰纟责",
@@ -314908,7 +314921,7 @@
     },
     {
         "character": "菟",
-        "definition": "creeper, parasitic vine; Cuscuta sinensis ",
+        "definition": "creeper, parasitic vine; Cuscuta sinensis",
         "pinyin": [
             "tù",
             "tú"
@@ -322275,7 +322288,8 @@
         "character": "蕃",
         "definition": "abundant, flourishing; barbarians, foreigners",
         "pinyin": [
-            "fān"
+            "fān",
+            "bō"
         ],
         "decomposition": "⿱艹番",
         "etymology": {
@@ -348848,7 +348862,7 @@
         "decomposition": "⿱覀早",
         "etymology": {
             "type": "ideographic",
-            "hint": "From the east 早 to the west 覀 "
+            "hint": "From the east 早 to the west 覀"
         },
         "radical": "覀",
         "matches": [
@@ -374527,7 +374541,7 @@
         "etymology": {
             "type": "pictophonetic",
             "phonetic": "则",
-            "semantic": "戎",
+            "semantic": "戈",
             "hint": "weapons"
         },
         "radical": "贝",
@@ -394031,6 +394045,7 @@
         "character": "迹",
         "definition": "trace, sign, mark, footprint",
         "pinyin": [
+            "jì",
             "jī"
         ],
         "decomposition": "⿺辶亦",
@@ -407015,7 +407030,8 @@
         "character": "釐",
         "definition": "one thousandth",
         "pinyin": [
-            "lí"
+            "lí",
+            "xī"
         ],
         "decomposition": "⿱?厘",
         "etymology": {
@@ -418632,6 +418648,7 @@
         "character": "钭",
         "definition": "wine flagon",
         "pinyin": [
+            "dǒu",
             "tǒu"
         ],
         "decomposition": "⿰钅斗",
@@ -456578,6 +456595,7 @@
         "character": "饹",
         "definition": "buckwheat or sorghum noodles",
         "pinyin": [
+            "gē",
             "le"
         ],
         "decomposition": "⿰饣各",
@@ -461652,6 +461670,7 @@
         "character": "驯",
         "definition": "tame, obedient, docile",
         "pinyin": [
+            "xùn",
             "xún"
         ],
         "decomposition": "⿰马川",
@@ -491766,7 +491785,7 @@
     },
     {
         "character": "黯",
-        "definition": " black; dark; sullen, dreary",
+        "definition": "black; dark; sullen, dreary",
         "pinyin": [
             "àn"
         ],

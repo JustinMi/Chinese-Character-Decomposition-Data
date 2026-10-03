@@ -3025,3 +3025,35 @@
 {"character": "君", "field": "definition", "old": "sovereign, ruler, prince, monarch, chief", "new": "sovereign, ruler, prince, monarch, chief; (respectful) gentleman, Mr.; (literary) you", "rule": "manual"}
 {"character": "侃", "field": "definition", "old": "upright and strong; amiable", "new": "upright and strong; amiable; to chat idly, to chatter", "rule": "manual"}
 {"character": "燕", "field": "etymology_type", "old": "ideographic", "new": "pictographic", "rule": "manual"}
+{"character": "瓣", "field": "etymology_phonetic", "old": "\n\n\n\n\n\n\n\n辡", "new": "辡", "rule": "manual"}
+{"character": "五", "field": "etymology_hint", "old": "Five elements (the cross with the extra stroke) between heaven 一 and earth 一 ", "new": "Five elements (the cross with the extra stroke) between heaven 一 and earth 一", "rule": "manual"}
+{"character": "亘", "field": "etymology_hint", "old": "Stretching from heaven 一 to earth 一 ", "new": "Stretching from heaven 一 to earth 一", "rule": "manual"}
+{"character": "付", "field": "etymology_hint", "old": "To hand 寸 something over to someone 亻 ", "new": "To hand 寸 something over to someone 亻", "rule": "manual"}
+{"character": "分", "field": "etymology_hint", "old": "Pieces 八 being further subdivided with a knife 刀 ", "new": "Pieces 八 being further subdivided with a knife 刀", "rule": "manual"}
+{"character": "套", "field": "etymology_hint", "old": "A man 大 wrapped in a long 镸 cloth ", "new": "A man 大 wrapped in a long 镸 cloth", "rule": "manual"}
+{"character": "柒", "field": "etymology_hint", "old": "Seven 七 with accents to prevent forgery ", "new": "Seven 七 with accents to prevent forgery", "rule": "manual"}
+{"character": "生", "field": "etymology_hint", "old": " A shoot 屮 growing in the soil 土", "new": "A shoot 屮 growing in the soil 土", "rule": "manual"}
+{"character": "覃", "field": "etymology_hint", "old": "From the east 早 to the west 覀 ", "new": "From the east 早 to the west 覀", "rule": "manual"}
+{"character": "菟", "field": "definition", "old": "creeper, parasitic vine; Cuscuta sinensis ", "new": "creeper, parasitic vine; Cuscuta sinensis", "rule": "manual"}
+{"character": "黯", "field": "definition", "old": " black; dark; sullen, dreary", "new": "black; dark; sullen, dreary", "rule": "manual"}
+{"character": "留", "field": "definition", "old": "to stay, to remain; to preserve, to keep; to leave a message; ", "new": "to stay, to remain; to preserve, to keep; to leave a message", "rule": "manual"}
+{"character": "贼", "field": "etymology_semantic", "old": "戎", "new": "戈", "rule": "manual"}
+{"character": "伲", "field": "pinyin", "old": ["nì"], "new": ["ní", "nì"], "rule": "manual"}
+{"character": "卓", "field": "pinyin", "old": ["zhuō"], "new": ["zhuó", "zhuō"], "rule": "manual"}
+{"character": "哮", "field": "pinyin", "old": ["xiāo"], "new": ["xiào", "xiāo"], "rule": "manual"}
+{"character": "啥", "field": "pinyin", "old": ["shà"], "new": ["shá", "shà"], "rule": "manual"}
+{"character": "嬷", "field": "pinyin", "old": ["mā"], "new": ["mó", "mā"], "rule": "manual"}
+{"character": "尢", "field": "pinyin", "old": ["yóu"], "new": ["wāng", "yóu"], "rule": "manual"}
+{"character": "帧", "field": "pinyin", "old": ["zhèng"], "new": ["zhēn", "zhèng"], "rule": "manual"}
+{"character": "桲", "field": "pinyin", "old": ["po"], "new": ["bó", "po"], "rule": "manual"}
+{"character": "槭", "field": "pinyin", "old": ["qī"], "new": ["qì", "qī"], "rule": "manual"}
+{"character": "潦", "field": "pinyin", "old": ["lǎo"], "new": ["liáo", "lǎo"], "rule": "manual"}
+{"character": "瑱", "field": "pinyin", "old": ["zhèn"], "new": ["tiàn", "zhèn"], "rule": "manual"}
+{"character": "绩", "field": "pinyin", "old": ["jī"], "new": ["jì", "jī"], "rule": "manual"}
+{"character": "迹", "field": "pinyin", "old": ["jī"], "new": ["jì", "jī"], "rule": "manual"}
+{"character": "钭", "field": "pinyin", "old": ["tǒu"], "new": ["dǒu", "tǒu"], "rule": "manual"}
+{"character": "饹", "field": "pinyin", "old": ["le"], "new": ["gē", "le"], "rule": "manual"}
+{"character": "驯", "field": "pinyin", "old": ["xún"], "new": ["xùn", "xún"], "rule": "manual"}
+{"character": "蕃", "field": "pinyin", "old": ["fān"], "new": ["fān", "bō"], "rule": "manual"}
+{"character": "釐", "field": "pinyin", "old": ["lí"], "new": ["lí", "xī"], "rule": "manual"}
+{"character": "綮", "field": "pinyin", "old": ["qǐ"], "new": ["qǐ", "qìng"], "rule": "manual"}

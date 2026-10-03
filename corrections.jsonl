@@ -15,3 +15,35 @@
 {"character": "侃", "field": "definition", "old": "upright and strong; amiable", "new": "upright and strong; amiable; to chat idly, to chatter", "note": "dominant modern sense: 侃大山"}
 {"character": "燕", "field": "pinyin", "old": ["yàn"], "new": ["yàn", "yān"], "note": "yān in 燕山, 燕国"}
 {"character": "燕", "field": "etymology_type", "old": "ideographic", "new": "pictographic", "note": "the hint describes a single picture of a swallow"}
+{"character": "瓣", "field": "etymology_phonetic", "old": "\n\n\n\n\n\n\n\n辡", "new": "辡", "note": "strip 8 stray newlines", "source": "review follow-up 2026-10-03"}
+{"character": "五", "field": "etymology_hint", "old": "Five elements (the cross with the extra stroke) between heaven 一 and earth 一 ", "new": "Five elements (the cross with the extra stroke) between heaven 一 and earth 一", "note": "strip stray space", "source": "review follow-up 2026-10-03"}
+{"character": "亘", "field": "etymology_hint", "old": "Stretching from heaven 一 to earth 一 ", "new": "Stretching from heaven 一 to earth 一", "note": "strip stray space", "source": "review follow-up 2026-10-03"}
+{"character": "付", "field": "etymology_hint", "old": "To hand 寸 something over to someone 亻 ", "new": "To hand 寸 something over to someone 亻", "note": "strip stray space", "source": "review follow-up 2026-10-03"}
+{"character": "分", "field": "etymology_hint", "old": "Pieces 八 being further subdivided with a knife 刀 ", "new": "Pieces 八 being further subdivided with a knife 刀", "note": "strip stray space", "source": "review follow-up 2026-10-03"}
+{"character": "套", "field": "etymology_hint", "old": "A man 大 wrapped in a long 镸 cloth ", "new": "A man 大 wrapped in a long 镸 cloth", "note": "strip stray space", "source": "review follow-up 2026-10-03"}
+{"character": "柒", "field": "etymology_hint", "old": "Seven 七 with accents to prevent forgery ", "new": "Seven 七 with accents to prevent forgery", "note": "strip stray space", "source": "review follow-up 2026-10-03"}
+{"character": "生", "field": "etymology_hint", "old": " A shoot 屮 growing in the soil 土", "new": "A shoot 屮 growing in the soil 土", "note": "strip stray space", "source": "review follow-up 2026-10-03"}
+{"character": "覃", "field": "etymology_hint", "old": "From the east 早 to the west 覀 ", "new": "From the east 早 to the west 覀", "note": "strip stray space", "source": "review follow-up 2026-10-03"}
+{"character": "菟", "field": "definition", "old": "creeper, parasitic vine; Cuscuta sinensis ", "new": "creeper, parasitic vine; Cuscuta sinensis", "note": "strip stray space", "source": "review follow-up 2026-10-03"}
+{"character": "黯", "field": "definition", "old": " black; dark; sullen, dreary", "new": "black; dark; sullen, dreary", "note": "strip stray space", "source": "review follow-up 2026-10-03"}
+{"character": "留", "field": "definition", "old": "to stay, to remain; to preserve, to keep; to leave a message; ", "new": "to stay, to remain; to preserve, to keep; to leave a message", "note": "strip trailing '; '", "source": "review follow-up 2026-10-03"}
+{"character": "贼", "field": "etymology_semantic", "old": "戎", "new": "戈", "note": "Shuowen: 从戈則聲", "source": "review follow-up 2026-10-03"}
+{"character": "伲", "field": "pinyin", "old": ["nì"], "new": ["ní", "nì"], "note": "ní per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "卓", "field": "pinyin", "old": ["zhuō"], "new": ["zhuó", "zhuō"], "note": "zhuó per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "哮", "field": "pinyin", "old": ["xiāo"], "new": ["xiào", "xiāo"], "note": "xiào per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "啥", "field": "pinyin", "old": ["shà"], "new": ["shá", "shà"], "note": "shá per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "嬷", "field": "pinyin", "old": ["mā"], "new": ["mó", "mā"], "note": "mó per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "尢", "field": "pinyin", "old": ["yóu"], "new": ["wāng", "yóu"], "note": "wāng per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "帧", "field": "pinyin", "old": ["zhèng"], "new": ["zhēn", "zhèng"], "note": "zhēn per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "桲", "field": "pinyin", "old": ["po"], "new": ["bó", "po"], "note": "bó per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "槭", "field": "pinyin", "old": ["qī"], "new": ["qì", "qī"], "note": "qì per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "潦", "field": "pinyin", "old": ["lǎo"], "new": ["liáo", "lǎo"], "note": "liáo per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "瑱", "field": "pinyin", "old": ["zhèn"], "new": ["tiàn", "zhèn"], "note": "tiàn per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "绩", "field": "pinyin", "old": ["jī"], "new": ["jì", "jī"], "note": "jì per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "迹", "field": "pinyin", "old": ["jī"], "new": ["jì", "jī"], "note": "jì per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "钭", "field": "pinyin", "old": ["tǒu"], "new": ["dǒu", "tǒu"], "note": "dǒu per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "饹", "field": "pinyin", "old": ["le"], "new": ["gē", "le"], "note": "gē per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "驯", "field": "pinyin", "old": ["xún"], "new": ["xùn", "xún"], "note": "xùn per kMandarin and kTGHZ2013 (2013 standard)", "source": "review follow-up 2026-10-03"}
+{"character": "蕃", "field": "pinyin", "old": ["fān"], "new": ["fān", "bō"], "note": "bō per kMandarin and kTGHZ2013; listed after fān/fán, which the definition describes", "source": "review follow-up 2026-10-03"}
+{"character": "釐", "field": "pinyin", "old": ["lí"], "new": ["lí", "xī"], "note": "xī per kMandarin and kTGHZ2013; listed after lí, which the definition describes", "source": "review follow-up 2026-10-03"}
+{"character": "綮", "field": "pinyin", "old": ["qǐ"], "new": ["qǐ", "qìng"], "note": "qìng per kMandarin and kTGHZ2013; listed after qǐ, which the definition describes", "source": "review follow-up 2026-10-03"}
