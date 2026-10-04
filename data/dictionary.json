@@ -121111,7 +121111,7 @@
     },
     {
         "character": "挎",
-        "definition": "to carry",
+        "definition": "to carry on the arm or shoulder, to sling over",
         "pinyin": [
             "kuà"
         ],
@@ -181992,9 +181992,9 @@
         ],
         "decomposition": "⿰氵⿱刃止",
         "etymology": {
-            "type": "pictophonetic",
-            "phonetic": "止",
-            "hint": "Water 氵 that cuts like a knife 刃; 止 provides the pronunciation"
+            "type": "ideographic",
+            "semantic": "氵",
+            "hint": "Water 氵 that cuts like a knife 刃; simplified from 澀, where 歰 (sè) provided the pronunciation"
         },
         "radical": "氵",
         "matches": [

@@ -3060,3 +3060,8 @@
 {"character": "廷", "field": "etymology_phonetic", "old": "", "new": "壬", "rule": "manual"}
 {"character": "廷", "field": "definition", "old": "courtyard", "new": "imperial court, royal court; (archaic) courtyard, now written 庭", "rule": "manual"}
 {"character": "腔", "field": "definition", "old": "chest cavity; a hollow in the body", "new": "cavity; a hollow in the body; tune; accent; tone of voice", "rule": "manual"}
+{"character": "挎", "field": "definition", "old": "to carry", "new": "to carry on the arm or shoulder, to sling over", "rule": "manual"}
+{"character": "涩", "field": "etymology_semantic", "old": "", "new": "氵", "rule": "manual"}
+{"character": "涩", "field": "etymology_phonetic", "old": "止", "new": "", "rule": "manual"}
+{"character": "涩", "field": "etymology_hint", "old": "Water 氵 that cuts like a knife 刃; 止 provides the pronunciation", "new": "Water 氵 that cuts like a knife 刃; simplified from 澀, where 歰 (sè) provided the pronunciation", "rule": "manual"}
+{"character": "涩", "field": "etymology_type", "old": "pictophonetic", "new": "ideographic", "rule": "manual"}
