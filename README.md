@@ -26,8 +26,8 @@ scripts/
   convert_to_jsonl.py        made the original dictionary.jsonl from dictionary.json
 docs/
   dictionary_schema_description.md   the Make Me a Hanzi data format
-skill/
-  dictionary-corrections/    source of the Claude skill for applying patch batches
+.claude/skills/
+  dictionary-corrections/    Claude skill for applying patch batches (/dictionary-corrections)
 ```
 
 ## Setup
@@ -107,7 +107,7 @@ field a patch has set. The exit status is 0 when everything is clean, 1 for
 conflicts or invalid patches, and 2 for a missing file.
 
 This is the same workflow as the `dictionary-corrections` skill, whose
-source is in `skill/`; its script runs this one.
+source is in `.claude/skills/`; its script runs this one.
 
 ## What the phases do
 
