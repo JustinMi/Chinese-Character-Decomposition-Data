@@ -3065,3 +3065,5 @@
 {"character": "涩", "field": "etymology_phonetic", "old": "止", "new": "", "rule": "manual"}
 {"character": "涩", "field": "etymology_hint", "old": "Water 氵 that cuts like a knife 刃; 止 provides the pronunciation", "new": "Water 氵 that cuts like a knife 刃; simplified from 澀, where 歰 (sè) provided the pronunciation", "rule": "manual"}
 {"character": "涩", "field": "etymology_type", "old": "pictophonetic", "new": "ideographic", "rule": "manual"}
+{"character": "沈", "field": "definition", "old": "to sink, to submerge; addicted; surname", "new": "surname (shěn); Shenyang (city, shěn); to sink, to submerge; addicted (chén, variant of 沉)", "rule": "manual"}
+{"character": "瀋", "field": "definition", "old": "to sink, to submerge; addicted; surname", "new": "juice, liquid; Shenyang (city, as in 瀋陽)", "rule": "manual"}
