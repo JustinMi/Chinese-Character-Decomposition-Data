@@ -1,5 +1,5 @@
 #!/bin/sh
-# Rebuild data/dictionary.jsonl, data/changelog.jsonl, data/dictionary.json,
+# Rebuild data/golden/dictionary.jsonl, data/changelog.jsonl, data/dictionary.json,
 # data/dictionary.db and review/ from the originals by running every phase.
 set -eu
 cd "$(dirname "$0")/.."
@@ -10,14 +10,14 @@ if [ ! -x "$PY" ]; then
     exit 1
 fi
 if git rev-parse --git-dir >/dev/null 2>&1 &&
-    [ -n "$(git status --porcelain -- data/dictionary.jsonl data/changelog.jsonl data/dictionary.json data/dictionary.db)" ]; then
-    echo "data/dictionary.jsonl, changelog.jsonl, dictionary.json or dictionary.db has uncommitted changes;" \
+    [ -n "$(git status --porcelain -- data/golden/dictionary.jsonl data/changelog.jsonl data/dictionary.json data/dictionary.db)" ]; then
+    echo "data/golden/dictionary.jsonl, data/changelog.jsonl, dictionary.json or dictionary.db has uncommitted changes;" \
         "commit or discard them first." >&2
     exit 1
 fi
 
-cp data/dictionary.original.jsonl data/dictionary.jsonl
-chmod u+w data/dictionary.jsonl
+cp data/golden/dictionary.original.jsonl data/golden/dictionary.jsonl
+chmod u+w data/golden/dictionary.jsonl
 rm -f data/changelog.jsonl
 
 "$PY" scripts/phase1_fixes.py --write

@@ -15,8 +15,9 @@ All of these live in the dictionary project folder, the git repository with `dat
 
 | File | Role |
 |---|---|
-| `data/dictionary.jsonl` | The live dictionary. Only the script edits it. |
-| `data/dictionary.original.jsonl` | The pristine backup. Never modify it. Patches may match against it. |
+| `data/golden/dictionary.jsonl` | The live dictionary. Only the script edits it. |
+| `data/golden/dictionary.original.jsonl` | The pristine backup. Never modify it. Patches may match against it. |
+| `data/golden/dictionary.original.json` | The pristine nested original that `dictionary.json` is rebuilt from. Never modify it. |
 | `data/corrections.jsonl` | Every manual patch ever accepted. It only ever grows. |
 | `data/changelog.jsonl` | One line per change actually made, by the automated fixes and by these patches. |
 | `data/dictionary.json`, `data/dictionary.db` | Nested and SQLite copies of the dictionary. The script regenerates them on every write. |
@@ -39,9 +40,9 @@ This skill's `scripts/apply_corrections.py` is a launcher. It finds the project'
 
 ### 1. Check that you're in the project
 
-If the launcher can't find `data/dictionary.jsonl` and `scripts/apply_corrections.py`, it stops with exit code 2. Ask the user where the project is.
+If the launcher can't find `data/golden/dictionary.jsonl` and `scripts/apply_corrections.py`, it stops with exit code 2. Ask the user where the project is.
 
-If the script reports that `data/dictionary.original.jsonl` is missing, stop and ask the user where the pristine copy is. Never recreate it from `dictionary.jsonl`, which already contains fixes.
+If the script reports that `data/golden/dictionary.original.jsonl` (or `dictionary.original.json`) is missing, stop and ask the user where the pristine copy is. Never recreate it from `dictionary.jsonl`, which already contains fixes.
 
 ### 2. Save the batch
 
@@ -101,7 +102,7 @@ corrections: 廷 吓 (3 patches)
 
 ### 8. Remind the user to re-upload
 
-The Claude chat project holds its own read-only copy of `dictionary.jsonl`. End every run with a one-line reminder to replace that project file with the updated `data/dictionary.jsonl`; otherwise, the study sessions keep seeing the old data and will flag the same bugs again.
+The Claude chat project holds its own read-only copy of `dictionary.jsonl`. End every run with a one-line reminder to replace that project file with the updated `data/golden/dictionary.jsonl`; otherwise, the study sessions keep seeing the old data and will flag the same bugs again.
 
 ## Handling conflicts
 

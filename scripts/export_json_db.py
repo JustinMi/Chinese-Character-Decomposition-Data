@@ -20,11 +20,11 @@ import os
 from typing import Any
 
 import build_db
-from common import DATA_DIR, DICT_PATH, ORIGINAL_PATH, Entry, load_entries
+from common import DATA_DIR, DICT_PATH, GOLDEN_DIR, ORIGINAL_PATH, Entry, load_entries
 from convert_to_jsonl import flatten_dict
 
 JSON_PATH = os.path.join(DATA_DIR, "dictionary.json")
-ORIGINAL_JSON_PATH = os.path.join(DATA_DIR, "dictionary.original.json")
+ORIGINAL_JSON_PATH = os.path.join(GOLDEN_DIR, "dictionary.original.json")
 DB_PATH = os.path.join(DATA_DIR, "dictionary.db")
 
 ENTRY_KEYS = ["character", "definition", "pinyin", "decomposition", "etymology", "radical", "matches"]

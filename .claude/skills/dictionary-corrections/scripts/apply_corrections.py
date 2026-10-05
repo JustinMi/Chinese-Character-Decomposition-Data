@@ -19,11 +19,11 @@ import sys
 
 
 def find_project_script(start):
-    """scripts/apply_corrections.py in the nearest folder that also has data/dictionary.jsonl."""
+    """scripts/apply_corrections.py in the nearest folder that also has data/golden/dictionary.jsonl."""
     folder = os.path.abspath(start)
     while True:
         script = os.path.join(folder, "scripts", "apply_corrections.py")
-        if os.path.isfile(script) and os.path.isfile(os.path.join(folder, "data", "dictionary.jsonl")):
+        if os.path.isfile(script) and os.path.isfile(os.path.join(folder, "data", "golden", "dictionary.jsonl")):
             return script
         parent = os.path.dirname(folder)
         if parent == folder:
@@ -35,7 +35,7 @@ def main():
     script = find_project_script(os.getcwd())
     if script is None:
         print("error: run this from the dictionary project folder "
-              "(the one with data/dictionary.jsonl and scripts/apply_corrections.py)", file=sys.stderr)
+              "(the one with data/golden/dictionary.jsonl and scripts/apply_corrections.py)", file=sys.stderr)
         return 2
     os.execv(sys.executable, [sys.executable, script] + sys.argv[1:])
 

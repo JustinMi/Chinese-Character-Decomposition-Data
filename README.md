@@ -1,16 +1,17 @@
 # Character Decomposition Data
 
-`data/dictionary.jsonl` is a Chinese character dictionary (9,574 entries, one
+`data/golden/dictionary.jsonl` is a Chinese character dictionary (9,574 entries, one
 JSON object per line) flattened from Make Me a Hanzi, with fixes applied on
 top of the untouched original.
 
 ```
 data/
-  dictionary.jsonl           the fixed dictionary
+  golden/
+    dictionary.jsonl           the fixed dictionary
+    dictionary.original.jsonl  the original, read-only. Never edit it.
+    dictionary.original.json   the original nested data, read-only. Never edit it.
   dictionary.json            the same data in nested form, kept in sync
   dictionary.db              the same data in SQLite, kept in sync
-  dictionary.original.jsonl  the original, read-only. Never edit it.
-  dictionary.original.json   the original nested data, read-only. Never edit it.
   corrections.jsonl          manual patches, one per line
   changelog.jsonl            every change: {"character", "field", "old", "new", "rule"}
   sources/                   downloaded Unihan and cjkvi-ids data (git-ignored)

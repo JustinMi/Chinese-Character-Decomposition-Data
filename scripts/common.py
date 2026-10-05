@@ -22,8 +22,9 @@ from typing import Any
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT, "data")
-DICT_PATH = os.path.join(DATA_DIR, "dictionary.jsonl")
-ORIGINAL_PATH = os.path.join(DATA_DIR, "dictionary.original.jsonl")
+GOLDEN_DIR = os.path.join(DATA_DIR, "golden")
+DICT_PATH = os.path.join(GOLDEN_DIR, "dictionary.jsonl")
+ORIGINAL_PATH = os.path.join(GOLDEN_DIR, "dictionary.original.jsonl")
 CHANGELOG_PATH = os.path.join(DATA_DIR, "changelog.jsonl")
 CORRECTIONS_PATH = os.path.join(DATA_DIR, "corrections.jsonl")
 REVIEW_DIR = os.path.join(ROOT, "review")
