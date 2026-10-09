@@ -3070,3 +3070,4 @@
 {"character": "悬", "field": "etymology_hint", "old": "Pride 心  in one's country 县, expressed by a flag; 县 also provides the pronunciation", "new": "Simplified from 懸: the heart 心 left hanging; 县 (from 縣, originally 'to hang') also provides the pronunciation", "rule": "manual"}
 {"character": "充", "field": "etymology_type", "old": "", "new": "ideographic", "rule": "manual"}
 {"character": "充", "field": "etymology_hint", "old": "", "new": "A newborn child (top, as in 育) growing into a full-grown person 儿; originally 'to grow tall', hence 'to fill out, fill up'", "rule": "manual"}
+{"character": "充", "field": "decomposition", "old": "⿱亠允", "new": "⿱𠫓儿", "rule": "manual"}
