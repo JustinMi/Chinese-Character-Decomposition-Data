@@ -3067,3 +3067,4 @@
 {"character": "涩", "field": "etymology_type", "old": "pictophonetic", "new": "ideographic", "rule": "manual"}
 {"character": "沈", "field": "definition", "old": "to sink, to submerge; addicted; surname", "new": "surname (shěn); Shenyang (city, shěn); to sink, to submerge; addicted (chén, variant of 沉)", "rule": "manual"}
 {"character": "瀋", "field": "definition", "old": "to sink, to submerge; addicted; surname", "new": "juice, liquid; Shenyang (city, as in 瀋陽)", "rule": "manual"}
+{"character": "悬", "field": "etymology_hint", "old": "Pride 心  in one's country 县, expressed by a flag; 县 also provides the pronunciation", "new": "Simplified from 懸: the heart 心 left hanging; 县 (from 縣, originally 'to hang') also provides the pronunciation", "rule": "manual"}
