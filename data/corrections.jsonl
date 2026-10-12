@@ -64,3 +64,4 @@
 {"character": "扩", "field": "etymology_semantic", "old": "广", "new": "扌", "note": "Semantic and phonetic were swapped; hand 扌 carries the meaning in 擴/扩", "source": "study 2026-10-12"}
 {"character": "扩", "field": "etymology_phonetic", "old": "扌", "new": "广", "note": "广 is the simplified 廣 (guǎng), the phonetic in traditional 擴", "source": "study 2026-10-12"}
 {"character": "扩", "field": "etymology_hint", "old": "wide", "new": "To make something wide 广 by hand 扌; 广 (廣 guǎng) also provides the pronunciation", "note": "Old hint described 广, not the semantic 扌; rewritten as a full-character hint", "source": "study 2026-10-12"}
+{"character": "喇", "field": "definition", "old": "horn, bugle; llama; final particle", "new": "horn, bugle; lama (as in 喇嘛, Tibetan monk); final particle (Cantonese)", "note": "'llama' (the animal) should be 'lama' (the monk); the final-particle sense is Cantonese, not Mandarin", "source": "study 2026-10-12"}

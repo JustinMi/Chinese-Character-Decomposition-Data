@@ -3074,3 +3074,4 @@
 {"character": "扩", "field": "etymology_semantic", "old": "广", "new": "扌", "rule": "manual"}
 {"character": "扩", "field": "etymology_phonetic", "old": "扌", "new": "广", "rule": "manual"}
 {"character": "扩", "field": "etymology_hint", "old": "wide", "new": "To make something wide 广 by hand 扌; 广 (廣 guǎng) also provides the pronunciation", "rule": "manual"}
+{"character": "喇", "field": "definition", "old": "horn, bugle; llama; final particle", "new": "horn, bugle; lama (as in 喇嘛, Tibetan monk); final particle (Cantonese)", "rule": "manual"}
