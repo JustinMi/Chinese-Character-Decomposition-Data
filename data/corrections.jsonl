@@ -61,3 +61,6 @@
 {"character": "充", "field": "etymology_type", "old": "", "new": "ideographic", "note": "Etymology fields were blank", "source": "study 2026-10-09"}
 {"character": "充", "field": "etymology_hint", "old": "", "new": "A newborn child (top, as in 育) growing into a full-grown person 儿; originally 'to grow tall', hence 'to fill out, fill up'", "note": "Etymology fields were blank; Shuowen also treats the top as abbreviated 育 for sound", "source": "study 2026-10-09"}
 {"character": "充", "field": "decomposition", "old": "⿱亠允", "new": "⿱𠫓儿", "note": "Match the etymology hint (育-top 𠫓 over 儿); cjkvi-ids lists ⿱𠫓儿 first, ⿱亠允 second", "source": "claude code 2026-10-09"}
+{"character": "扩", "field": "etymology_semantic", "old": "广", "new": "扌", "note": "Semantic and phonetic were swapped; hand 扌 carries the meaning in 擴/扩", "source": "study 2026-10-12"}
+{"character": "扩", "field": "etymology_phonetic", "old": "扌", "new": "广", "note": "广 is the simplified 廣 (guǎng), the phonetic in traditional 擴", "source": "study 2026-10-12"}
+{"character": "扩", "field": "etymology_hint", "old": "wide", "new": "To make something wide 广 by hand 扌; 广 (廣 guǎng) also provides the pronunciation", "note": "Old hint described 广, not the semantic 扌; rewritten as a full-character hint", "source": "study 2026-10-12"}

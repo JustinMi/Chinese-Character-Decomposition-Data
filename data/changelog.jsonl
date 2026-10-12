@@ -3071,3 +3071,6 @@
 {"character": "充", "field": "etymology_type", "old": "", "new": "ideographic", "rule": "manual"}
 {"character": "充", "field": "etymology_hint", "old": "", "new": "A newborn child (top, as in 育) growing into a full-grown person 儿; originally 'to grow tall', hence 'to fill out, fill up'", "rule": "manual"}
 {"character": "充", "field": "decomposition", "old": "⿱亠允", "new": "⿱𠫓儿", "rule": "manual"}
+{"character": "扩", "field": "etymology_semantic", "old": "广", "new": "扌", "rule": "manual"}
+{"character": "扩", "field": "etymology_phonetic", "old": "扌", "new": "广", "rule": "manual"}
+{"character": "扩", "field": "etymology_hint", "old": "wide", "new": "To make something wide 广 by hand 扌; 广 (廣 guǎng) also provides the pronunciation", "rule": "manual"}
