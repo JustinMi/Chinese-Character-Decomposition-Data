@@ -235910,14 +235910,16 @@
     },
     {
         "character": "眨",
-        "definition": "to wink",
+        "definition": "to blink; to wink",
         "pinyin": [
             "zhǎ"
         ],
         "decomposition": "⿰目乏",
         "etymology": {
-            "type": "ideographic",
-            "hint": "Two eyes, one open 目 and one shut 乏"
+            "type": "pictophonetic",
+            "phonetic": "乏",
+            "semantic": "目",
+            "hint": "eye"
         },
         "radical": "目",
         "matches": [

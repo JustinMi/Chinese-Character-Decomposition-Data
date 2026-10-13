@@ -3079,3 +3079,8 @@
 {"character": "惰", "field": "etymology_hint", "old": "mind", "new": "Laziness is a state of mind 忄; the right side is 隋 minus its 阝, which provides the pronunciation", "rule": "manual"}
 {"character": "喇", "field": "pinyin", "old": ["lǎ"], "new": ["lǎ", "lā", "lá"], "rule": "manual"}
 {"character": "嘛", "field": "definition", "old": "final exclamatory particle", "new": "final exclamatory particle; lama (as in 喇嘛, Tibetan monk)", "rule": "manual"}
+{"character": "眨", "field": "definition", "old": "to wink", "new": "to blink; to wink", "rule": "manual"}
+{"character": "眨", "field": "etymology_type", "old": "ideographic", "new": "pictophonetic", "rule": "manual"}
+{"character": "眨", "field": "etymology_semantic", "old": "", "new": "目", "rule": "manual"}
+{"character": "眨", "field": "etymology_phonetic", "old": "", "new": "乏", "rule": "manual"}
+{"character": "眨", "field": "etymology_hint", "old": "Two eyes, one open 目 and one shut 乏", "new": "eye", "rule": "manual"}
