@@ -61365,9 +61365,9 @@
         "decomposition": "⿱陏土",
         "etymology": {
             "type": "pictophonetic",
-            "phonetic": "陏",
+            "phonetic": "隋",
             "semantic": "土",
-            "hint": "earth"
+            "hint": "To fall to the earth 土; 陏, a short form of 隋, provides the pronunciation"
         },
         "radical": "土",
         "matches": [
@@ -156765,9 +156765,9 @@
         "decomposition": "⿰木陏",
         "etymology": {
             "type": "pictophonetic",
-            "phonetic": "陏",
+            "phonetic": "隋",
             "semantic": "木",
-            "hint": "wood"
+            "hint": "Originally an oval wooden 木 vessel; 陏, a short form of 隋, provides the pronunciation"
         },
         "radical": "木",
         "matches": [
@@ -396086,7 +396086,7 @@
         "pinyin": [
             "suí"
         ],
-        "decomposition": "⿺辶?",
+        "decomposition": "⿺辶⿱左⺼",
         "radical": "辶",
         "matches": [
             null,
@@ -436409,8 +436409,10 @@
         ],
         "decomposition": "⿰阝迶",
         "etymology": {
-            "type": "ideographic",
-            "hint": "To walk 迶 to the city 阝; to follow a path"
+            "type": "pictophonetic",
+            "phonetic": "隋",
+            "semantic": "辶",
+            "hint": "To follow on foot 辶; the rest (阝 and 有) is a short form of 隋, which provides the pronunciation"
         },
         "radical": "阝",
         "matches": [
@@ -437004,8 +437006,10 @@
         ],
         "decomposition": "⿰阝遀",
         "etymology": {
-            "type": "ideographic",
-            "hint": "To walk 遀 to the city 阝; to follow a path"
+            "type": "pictophonetic",
+            "phonetic": "隋",
+            "semantic": "辶",
+            "hint": "To follow on foot 辶; 隋 (阝 with 左 and 月) provides the pronunciation"
         },
         "radical": "阝",
         "matches": [
@@ -465216,12 +465220,12 @@
         "pinyin": [
             "suǐ"
         ],
-        "decomposition": "⿰骨?",
+        "decomposition": "⿰骨遀",
         "etymology": {
             "type": "pictophonetic",
-            "phonetic": "遀",
+            "phonetic": "隋",
             "semantic": "骨",
-            "hint": "bone"
+            "hint": "The marrow inside bone 骨; the right side is 隋 with 辶 in place of 阝, which provides the pronunciation"
         },
         "radical": "骨",
         "matches": [

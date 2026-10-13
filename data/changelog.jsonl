@@ -3084,3 +3084,19 @@
 {"character": "眨", "field": "etymology_semantic", "old": "", "new": "目", "rule": "manual"}
 {"character": "眨", "field": "etymology_phonetic", "old": "", "new": "乏", "rule": "manual"}
 {"character": "眨", "field": "etymology_hint", "old": "Two eyes, one open 目 and one shut 乏", "new": "eye", "rule": "manual"}
+{"character": "堕", "field": "etymology_phonetic", "old": "陏", "new": "隋", "rule": "manual"}
+{"character": "堕", "field": "etymology_hint", "old": "earth", "new": "To fall to the earth 土; 陏, a short form of 隋, provides the pronunciation", "rule": "manual"}
+{"character": "椭", "field": "etymology_phonetic", "old": "陏", "new": "隋", "rule": "manual"}
+{"character": "椭", "field": "etymology_hint", "old": "wood", "new": "Originally an oval wooden 木 vessel; 陏, a short form of 隋, provides the pronunciation", "rule": "manual"}
+{"character": "随", "field": "etymology_type", "old": "ideographic", "new": "pictophonetic", "rule": "manual"}
+{"character": "随", "field": "etymology_semantic", "old": "", "new": "辶", "rule": "manual"}
+{"character": "随", "field": "etymology_phonetic", "old": "", "new": "隋", "rule": "manual"}
+{"character": "随", "field": "etymology_hint", "old": "To walk 迶 to the city 阝; to follow a path", "new": "To follow on foot 辶; the rest (阝 and 有) is a short form of 隋, which provides the pronunciation", "rule": "manual"}
+{"character": "隨", "field": "etymology_type", "old": "ideographic", "new": "pictophonetic", "rule": "manual"}
+{"character": "隨", "field": "etymology_semantic", "old": "", "new": "辶", "rule": "manual"}
+{"character": "隨", "field": "etymology_phonetic", "old": "", "new": "隋", "rule": "manual"}
+{"character": "隨", "field": "etymology_hint", "old": "To walk 遀 to the city 阝; to follow a path", "new": "To follow on foot 辶; 隋 (阝 with 左 and 月) provides the pronunciation", "rule": "manual"}
+{"character": "髓", "field": "decomposition", "old": "⿰骨?", "new": "⿰骨遀", "rule": "manual"}
+{"character": "髓", "field": "etymology_phonetic", "old": "遀", "new": "隋", "rule": "manual"}
+{"character": "髓", "field": "etymology_hint", "old": "bone", "new": "The marrow inside bone 骨; the right side is 隋 with 辶 in place of 阝, which provides the pronunciation", "rule": "manual"}
+{"character": "遀", "field": "decomposition", "old": "⿺辶?", "new": "⿺辶⿱左⺼", "rule": "manual"}
