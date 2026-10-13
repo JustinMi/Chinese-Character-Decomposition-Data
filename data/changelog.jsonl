@@ -3077,3 +3077,5 @@
 {"character": "喇", "field": "definition", "old": "horn, bugle; llama; final particle", "new": "horn, bugle; lama (as in 喇嘛, Tibetan monk); final particle (Cantonese)", "rule": "manual"}
 {"character": "惰", "field": "etymology_phonetic", "old": "左", "new": "隋", "rule": "manual"}
 {"character": "惰", "field": "etymology_hint", "old": "mind", "new": "Laziness is a state of mind 忄; the right side is 隋 minus its 阝, which provides the pronunciation", "rule": "manual"}
+{"character": "喇", "field": "pinyin", "old": ["lǎ"], "new": ["lǎ", "lā", "lá"], "rule": "manual"}
+{"character": "嘛", "field": "definition", "old": "final exclamatory particle", "new": "final exclamatory particle; lama (as in 喇嘛, Tibetan monk)", "rule": "manual"}

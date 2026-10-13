@@ -44665,7 +44665,9 @@
         "character": "喇",
         "definition": "horn, bugle; lama (as in 喇嘛, Tibetan monk); final particle (Cantonese)",
         "pinyin": [
-            "lǎ"
+            "lǎ",
+            "lā",
+            "lá"
         ],
         "decomposition": "⿰口剌",
         "etymology": {
@@ -49214,7 +49216,7 @@
     },
     {
         "character": "嘛",
-        "definition": "final exclamatory particle",
+        "definition": "final exclamatory particle; lama (as in 喇嘛, Tibetan monk)",
         "pinyin": [
             "ma"
         ],
