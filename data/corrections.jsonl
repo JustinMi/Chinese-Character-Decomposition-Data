@@ -91,3 +91,4 @@
 {"character": "髓", "field": "etymology_hint", "old": "bone", "new": "The marrow inside bone 骨; the right side is 隋 with 辶 in place of 阝, which provides the pronunciation", "note": "Explain the abbreviated phonetic, as in 惰", "source": "claude code 2026-10-13"}
 {"character": "遀", "field": "decomposition", "old": "⿺辶?", "new": "⿺辶⿱左⺼", "note": "Fill the unknown component from cjkvi-ids (⿺辶⿱左月), using ⺼ as in 隋 and 惰", "source": "claude code 2026-10-13"}
 {"character": "骚", "field": "definition", "old": "to annoy, to bother; to disturb, to harrass", "new": "to annoy, to bother; to disturb, to harass", "note": "Spelling fix: 'harrass' -> 'harass'", "source": "study 2026-10-14"}
+{"character": "騷", "field": "definition", "old": "to annoy, to bother; to disturb, to harrass", "new": "to annoy, to bother; to disturb, to harass", "note": "Spelling fix: 'harrass' -> 'harass' (same as 骚)", "source": "claude code 2026-10-14"}
